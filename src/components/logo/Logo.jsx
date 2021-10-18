@@ -1,4 +1,4 @@
-const Logo = ({type = "default"}) => {
+const Logo = ({type}) => {
     
     return (
         <div className="Logo">
