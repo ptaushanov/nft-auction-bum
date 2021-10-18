@@ -1,4 +1,4 @@
-const Logo = ({type}) => {
+function Logo({type}) {
     
     return (
         <div className="Logo">
