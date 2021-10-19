@@ -1,22 +1,28 @@
 import Grid from "@mui/material/Grid"
 import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
+import InputBase from '@mui/material/InputBase';
+import Paper from '@mui/material/Paper';
+import SearchIcon from "@mui/icons-material/Search"
 import Logo from "../logo/Logo"
+import styles from "./Header.module.scss"
 
 function Header(){
     return (
-        <div className="Header">
-            <Grid container>
+        <div className={styles.Header} style={{display: "flex", justifyContent: "center"}}>
+            <Grid className={styles.container} container spacing={5}>
                 <Grid item>
-                    <Logo></Logo>
+                    <Logo/>
                 </Grid>
                 <Grid item>
-                    <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+                    <Paper className={styles.searchPaper} sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width:400}} >
+                        <SearchIcon className = {styles.searchIcon}/>
+                        <InputBase className={styles.search}  placeholder="Find items, users and activities"/>
+                    </Paper>
                 </Grid>
                 <Grid item>
-                    <Button variant={"text"}>Home</Button>
-                    <Button variant={"text"}>Activity</Button>
-                    <Button variant={"contained"}>EXPLORE</Button>
+                    <Button className={styles.menuItem} size={"small"} variant={"text"}>Home</Button>
+                    <Button className={styles.menuItem} size={"small"} variant={"text"}>Activity</Button>
+                    <Button className={styles.menuItem} size={"small"} variant={"contained"}>EXPLORE</Button>
                 </Grid>
             </Grid>
         </div>

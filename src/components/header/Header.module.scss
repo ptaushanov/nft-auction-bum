@@ -1,0 +1,30 @@
+@use "../../styles/colors";
+
+.Header {
+    display: flex;
+    justify-content: center;
+    background-color: colors.$background_paper;
+}
+
+.search {
+    flex: 1;
+}
+
+.searchIcon {
+    padding: 3px;
+    margin-left: 5px;
+}
+
+.searchPaper {
+    background-color: colors.$background_default !important;
+}
+
+.container {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuItem {
+    color: colors.$text_primary !important;
+}
