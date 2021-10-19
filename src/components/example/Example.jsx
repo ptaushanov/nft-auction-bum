@@ -4,11 +4,13 @@ import Link from "../link/Link";
 import styles from "./Example.module.scss";
 import classNames from "classnames";
 import Header from "../header/Header";
+import Avatar  from "../avatar/Avatar";
 
 export default function Copyright() {
   return (
     <div>
-      <Header></Header>
+      <Header/>
+      <Avatar url={"images/avatar.png"} verified={true} />
     </div>
   );
 }
