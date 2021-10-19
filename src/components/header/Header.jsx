@@ -20,9 +20,9 @@ function Header(){
                     </Paper>
                 </Grid>
                 <Grid item>
-                    <Button className={styles.menuItem} size={"small"} variant={"text"}>Home</Button>
-                    <Button className={styles.menuItem} size={"small"} variant={"text"}>Activity</Button>
-                    <Button className={styles.menuItem} size={"small"} variant={"contained"}>EXPLORE</Button>
+                    <Button className={styles.menuItem} variant={"text"}>Home</Button>
+                    <Button className={styles.menuItem} variant={"text"}>Activity</Button>
+                    <Button className={styles.menuItem} variant={"contained"}>EXPLORE</Button>
                 </Grid>
             </Grid>
         </div>
