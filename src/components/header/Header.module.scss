@@ -6,7 +6,11 @@
     background-color: colors.$background_paper;
 }
 
-.search {
+.logo {
+    width: 20px !important;
+}
+
+.searchInput {
     flex: 1;
 }
 
@@ -27,4 +31,5 @@
 
 .menuItem {
     color: colors.$text_primary !important;
+    font-size: 8pt !important;
 }

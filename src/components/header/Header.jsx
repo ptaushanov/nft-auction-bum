@@ -9,14 +9,14 @@ import styles from "./Header.module.scss"
 function Header(){
     return (
         <div className={styles.Header} style={{display: "flex", justifyContent: "center"}}>
-            <Grid className={styles.container} container spacing={5}>
-                <Grid item>
+            <Grid className={styles.container} container spacing={6}>
+                <Grid item style={{marginBottom: "-0.5rem"}}>
                     <Logo/>
                 </Grid>
                 <Grid item>
                     <Paper className={styles.searchPaper} sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width:400}} >
                         <SearchIcon className = {styles.searchIcon}/>
-                        <InputBase className={styles.search}  placeholder="Find items, users and activities"/>
+                        <InputBase className={styles.searchInput}  placeholder="Find items, users and activities"/>
                     </Paper>
                 </Grid>
                 <Grid item>
