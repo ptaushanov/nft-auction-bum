@@ -5,12 +5,21 @@ import styles from "./Example.module.scss";
 import classNames from "classnames";
 import Header from "../header/Header";
 import User  from "../user/User";
+import Card from "../card/Card";
 
 export default function Copyright() {
   return (
     <div>
       <Header/>
-      <User name="terika77" info="134 items" avatar={"images/avatar.png"} verified={true} />
+      {/* <User name="terika77" info="134 items" avatar={"images/avatar.png"} verified={true} /> */}
+      <Card 
+        name="Clock"
+        likes={"1.1k"}
+        mediaUrl={"./images/nft.jpg"}
+        user={{avatarUrl:"./images/avatar.png", verified:true}}
+        price={"~12.4"}
+        currency={"ETH"}
+      />
     </div>
   );
 }

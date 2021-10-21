@@ -1,0 +1,44 @@
+@use "../../styles/colors";
+
+.card {
+    margin: 4rem auto; // temporary 
+    border-radius: 1rem !important;
+    background-color: colors.$background_paper !important;
+}
+
+.media {
+    width: 90% !important;
+    margin: auto;
+    border-radius: 1rem;
+}
+
+.likes {
+    color: colors.$secondary_main !important;
+    border-color: colors.$secondary_main !important;
+    margin: auto !important;
+    float: right;
+    border-width: 2px !important;
+
+    span {
+        padding-left: .5rem;
+    }
+}
+
+.heart {
+    color: colors.$secondary_main !important;
+    transform: scale(0.7);
+}
+
+.title, .price{
+    margin: 0;
+    font-weight: bold;
+}
+
+.title {
+    font-size: .9rem;
+}
+
+.price{
+    color: colors.$secondary_main !important;
+    font-size: .74rem;
+}
