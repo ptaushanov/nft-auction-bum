@@ -14,7 +14,7 @@ export default function Copyright() {
       {/* <User name="terika77" info="134 items" avatar={"images/avatar.png"} verified={true} /> */}
       <Card 
         name="Clock"
-        likes={"1.1k"}
+        likes={1100}
         mediaUrl={"./images/nft.jpg"}
         user={{avatarUrl:"./images/avatar.png", verified:true}}
         price={"~12.4"}
