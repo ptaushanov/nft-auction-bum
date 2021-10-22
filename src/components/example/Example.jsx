@@ -17,7 +17,7 @@ export default function Copyright() {
         likes={1100}
         mediaUrl={"./images/nft.jpg"}
         user={{avatarUrl:"./images/avatar.png", verified:true}}
-        price={"~12.4"}
+        price={"12.4"}
         currency={"ETH"}
       />
     </div>

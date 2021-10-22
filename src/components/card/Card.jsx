@@ -9,7 +9,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import Grid from "@mui/material/Grid"
 import millify from "millify"
 
-export default function({name, likes, mediaUrl, user, price, currency}){
+export default function({name, likes=0, mediaUrl, user, price, currency}){
     return (
         <Card className={styles.card} sx={{ maxWidth: 300 }}>
             <CardHeader
@@ -25,7 +25,7 @@ export default function({name, likes, mediaUrl, user, price, currency}){
                 <Grid container>
                     <Grid item xs={8}>
                         <p className={styles.title}>{name}</p>
-                        <p className={styles.price}>{price} {currency}</p>
+                        <p className={styles.price}>~{price} {currency}</p>
                     </Grid>
                     <Grid item xs={4}>
                         <Chip className={styles.likes}
