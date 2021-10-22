@@ -1,7 +1,6 @@
 @use "../../styles/colors";
 
 .card {
-    margin: 4rem auto; // temporary 
     border-radius: 1rem !important;
     background-color: colors.$background_paper !important;
 }
