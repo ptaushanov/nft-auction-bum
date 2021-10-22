@@ -1,5 +1,5 @@
 import styles from "./Card.module.scss"
-import Card from "@mui/material/Card"
+import MuiCard from "@mui/material/Card"
 import CardMedia from "@mui/material/CardMedia"
 import CardContent from "@mui/material/CardContent"
 import CardHeader from "@mui/material/CardHeader"
@@ -9,9 +9,9 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import Grid from "@mui/material/Grid"
 import millify from "millify"
 
-export default function({name, likes=0, mediaUrl, user, price, currency}){
+function Card({name, likes=0, mediaUrl, user, price, currency}){
     return (
-        <Card className={styles.card} sx={{ maxWidth: 300 }}>
+        <MuiCard className={styles.card} sx={{ maxWidth: 300 }}>
             <CardHeader
                 avatar={
                     <Avatar size={30} url={user.avatarUrl} verified={user.verified} />
@@ -36,6 +36,8 @@ export default function({name, likes=0, mediaUrl, user, price, currency}){
                     </Grid>
                 </Grid>
             </CardContent>
-        </Card>
+        </MuiCard>
     )
 }
+
+export default Card;
