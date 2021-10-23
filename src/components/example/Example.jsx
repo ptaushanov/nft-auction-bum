@@ -4,22 +4,42 @@ import Link from "../link/Link";
 import styles from "./Example.module.scss";
 import classNames from "classnames";
 import Header from "../header/Header";
-import User  from "../user/User";
-import Card from "../card/Card";
+import Trending from "../trending/Trending";
 
 export default function Copyright() {
   return (
     <div>
-      <Header/>
-      {/* <User name="terika77" info="134 items" avatar={"images/avatar.png"} verified={true} /> */}
-      <Card 
-        name="Clock"
-        likes={3500}
-        mediaUrl={"./images/nft.jpg"}
-        user={{avatarUrl:"./images/avatar.png", verified:true}}
-        price={"12.4"}
-        currency={"ETH"}
-      />
+      <Header />
+      <Trending cards={[
+        {
+          name:"Ivy",
+          user:{avatarUrl:"./images/avatar.png", verified:true},
+          mediaUrl:"./images/nft.jpg",
+          price: 1,
+          currency:"ETH"
+        },
+        {
+          name:"Judie",
+          user:{avatarUrl:"./images/avatar.png", verified:true},
+          mediaUrl:"./images/nft.jpg",
+          price: 2.3,
+          currency:"ETH"
+        },
+        {
+          name:"Juniper",
+          user:{avatarUrl:"./images/avatar.png", verified:true},
+          mediaUrl:"./images/nft.jpg",
+          price:5,
+          currency:"ETH"
+        },
+        {
+          name:"Maple",
+          user:{avatarUrl:"./images/avatar.png", verified:true},
+          mediaUrl:"./images/nft.jpg",
+          price: 10,
+          currency:"ETH"
+        },
+      ]}/>
     </div>
   );
 }

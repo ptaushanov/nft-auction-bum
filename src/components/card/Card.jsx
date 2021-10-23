@@ -11,7 +11,7 @@ import millify from "millify"
 
 function Card({name, likes=0, mediaUrl, user, price, currency}){
     return (
-        <MuiCard className={styles.card} sx={{ maxWidth: 300 }}>
+        <MuiCard className={styles.card}>
             <CardHeader
                 avatar={
                     <Avatar size={30} url={user.avatarUrl} verified={user.verified} />
