@@ -3,17 +3,43 @@ import Container from "@mui/material/Container";
 import Link from "../link/Link";
 import styles from "./Example.module.scss";
 import classNames from "classnames";
+import Header from "../header/Header";
+import Trending from "../trending/Trending";
 
 export default function Copyright() {
   return (
-    <div className={classNames(styles.wrapper)}>
-      <Container className={classNames(styles.container)} maxWidth="xl">
-        <Paper className={classNames(styles.paper)}>
-          <Link href="/about" color="secondary">
-            Hi
-          </Link>
-        </Paper>
-      </Container>
+    <div>
+      <Header />
+      <Trending cards={[
+        {
+          name:"Ivy",
+          user:{avatarUrl:"./images/avatar.png", verified:true},
+          mediaUrl:"./images/nft.jpg",
+          price: 1,
+          currency:"ETH"
+        },
+        {
+          name:"Judie",
+          user:{avatarUrl:"./images/avatar.png", verified:true},
+          mediaUrl:"./images/nft.jpg",
+          price: 2.3,
+          currency:"ETH"
+        },
+        {
+          name:"Juniper",
+          user:{avatarUrl:"./images/avatar.png", verified:true},
+          mediaUrl:"./images/nft.jpg",
+          price:5,
+          currency:"ETH"
+        },
+        {
+          name:"Maple",
+          user:{avatarUrl:"./images/avatar.png", verified:true},
+          mediaUrl:"./images/nft.jpg",
+          price: 10,
+          currency:"ETH"
+        },
+      ]}/>
     </div>
   );
 }
