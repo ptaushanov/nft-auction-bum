@@ -16,7 +16,7 @@ function Trending({cards=[]}){
                     </FormControl>
                 </Stack>
                 <Grid container spacing={2}>
-                    {cards.slice(0, 5).map((card, index)=>{
+                    {cards.slice(0, 4).map((card, index)=>{
                         return (
                             <Grid item xs={3} key={index}>
                                 <Card {...card} />
