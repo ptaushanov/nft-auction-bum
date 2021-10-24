@@ -41,3 +41,26 @@
     color: colors.$secondary_main !important;
     font-size: .74rem;
 }
+
+.badge {
+    position: absolute !important;
+    top: .5rem;
+    left: 1.5rem;
+    color: colors.$background_paper !important;
+    background-color: colors.$secondary_main !important;
+    width: 3.5rem;
+    border-radius: .4rem;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important;
+
+    svg {
+        transform: scale(0.6) !important;
+    }
+    
+    span {
+        font-weight: bold;
+        margin-left: .8rem;
+        margin-top: .1rem;
+    }
+}

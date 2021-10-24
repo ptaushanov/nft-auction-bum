@@ -1,11 +1,13 @@
 import styles from "./Card.module.scss"
 import Avatar from "../avatar/Avatar"
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import LiveIcon from '@mui/icons-material/FiberManualRecord';
 import MuiCard from "@mui/material/Card"
-import { CardMedia, CardContent, CardHeader, Chip, Grid } from "@mui/material"
+import { CardMedia, CardContent, CardHeader, Chip, Grid, Badge } from "@mui/material"
 import millify from "millify"
+import Countdown from "react-countdown"
 
-function Card({name, likes=0, mediaUrl, user, price, currency}){
+function Card({name, likes=0, mediaUrl, user, price, currency, timeLeft}){
     return (
         <MuiCard className={styles.card}>
             <CardHeader
@@ -13,10 +15,15 @@ function Card({name, likes=0, mediaUrl, user, price, currency}){
                     <Avatar size={30} url={user.avatarUrl} verified={user.verified} />
                 }
             />
-            <CardMedia className={styles.media} 
-                component="img"
-                image={mediaUrl}
-            />
+            <div style={{position: "relative"}}>
+                <Badge className={styles.badge} badgeContent={"Live".toUpperCase()} anchorOrigin={{vertical: 'center', horizontal: 'right'}}>
+                    <LiveIcon />
+                </Badge>
+                <CardMedia className={styles.media} 
+                    component="img"
+                    image={mediaUrl}
+                />
+            </div>
             <CardContent>
                 <Grid container>
                     <Grid item xs={8}>
