@@ -16,16 +16,24 @@ function Card({name, likes=0, mediaUrl, user, price, currency, timeLeft}){
                 }
             />
             <div style={{position: "relative"}}>
-                <Badge className={styles.badge} badgeContent={"Live".toUpperCase()} anchorOrigin={{vertical: 'center', horizontal: 'right'}}>
-                    <LiveIcon />
-                </Badge>
                 <CardMedia className={styles.media} 
                     component="img"
                     image={mediaUrl}
                 />
-                <div className={styles.countdown}>
-                    <Countdown date={Date.now() + timeLeft} />
-                </div>
+                {timeLeft && (
+                <>
+                    <Badge 
+                        className={styles.badge}
+                        badgeContent={"Live".toUpperCase()}
+                    >
+                        <LiveIcon />
+                    </Badge>
+                    <div className={styles.countdown}>
+                        <Countdown date={Date.now() + timeLeft} />
+                    </div>
+                </>
+                )}
+                
             </div>
             <CardContent>
                 <Grid container>
