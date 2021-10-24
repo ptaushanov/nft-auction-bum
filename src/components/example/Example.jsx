@@ -17,7 +17,7 @@ export default function Copyright() {
           mediaUrl:"./images/nft.jpg",
           price: 1,
           currency:"ETH",
-          timeLeft: 10000000
+          timeLeft: 345600
         },
         {
           name:"Judie",
@@ -33,7 +33,6 @@ export default function Copyright() {
           mediaUrl:"./images/nft.jpg",
           price:5,
           currency:"ETH",
-          timeLeft: 10000000
         },
         {
           name:"Maple",
@@ -41,7 +40,6 @@ export default function Copyright() {
           mediaUrl:"./images/nft.jpg",
           price: 10,
           currency:"ETH",
-          timeLeft: 10000000
         },
       ]}/>
     </div>

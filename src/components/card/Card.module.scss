@@ -48,19 +48,18 @@
     left: 1.5rem;
     color: colors.$background_paper !important;
     background-color: colors.$secondary_main !important;
-    width: 3.5rem;
+    width: 3.3rem;
     border-radius: .3rem;
     display: flex !important;
     flex-direction: row !important;
     align-items: stretch !important;
 
     svg {
-        transform: scale(0.6) !important;
+        transform: scale(0.5) !important;
     }
     
     span {
         font-weight: bold;
-        margin-left: .8rem;
         margin-top: .1rem;
         transform: translate(0);
     }
