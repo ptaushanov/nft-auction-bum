@@ -49,7 +49,7 @@
     color: colors.$background_paper !important;
     background-color: colors.$secondary_main !important;
     width: 3.5rem;
-    border-radius: .4rem;
+    border-radius: .3rem;
     display: flex !important;
     flex-direction: row !important;
     align-items: stretch !important;
@@ -63,4 +63,18 @@
         margin-left: .8rem;
         margin-top: .1rem;
     }
+}
+
+.countdown {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+    background-color: colors.$secondary_main !important;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    text-align: center;
+    color: colors.$background_paper !important;
+    font-weight: bold;
+    padding: .2rem 0;
 }

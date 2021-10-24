@@ -23,6 +23,9 @@ function Card({name, likes=0, mediaUrl, user, price, currency, timeLeft}){
                     component="img"
                     image={mediaUrl}
                 />
+                <div className={styles.countdown}>
+                    <Countdown date={Date.now() + timeLeft} />
+                </div>
             </div>
             <CardContent>
                 <Grid container>

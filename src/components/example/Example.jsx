@@ -16,28 +16,32 @@ export default function Copyright() {
           user:{avatarUrl:"./images/avatar.png", verified:true},
           mediaUrl:"./images/nft.jpg",
           price: 1,
-          currency:"ETH"
+          currency:"ETH",
+          timeLeft: 10000000
         },
         {
           name:"Judie",
           user:{avatarUrl:"./images/avatar.png", verified:true},
           mediaUrl:"./images/nft.jpg",
           price: 2.3,
-          currency:"ETH"
+          currency:"ETH",
+          timeLeft: 10000000
         },
         {
           name:"Juniper",
           user:{avatarUrl:"./images/avatar.png", verified:true},
           mediaUrl:"./images/nft.jpg",
           price:5,
-          currency:"ETH"
+          currency:"ETH",
+          timeLeft: 10000000
         },
         {
           name:"Maple",
           user:{avatarUrl:"./images/avatar.png", verified:true},
           mediaUrl:"./images/nft.jpg",
           price: 10,
-          currency:"ETH"
+          currency:"ETH",
+          timeLeft: 10000000
         },
       ]}/>
     </div>
