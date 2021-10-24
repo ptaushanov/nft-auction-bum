@@ -41,3 +41,40 @@
     color: colors.$secondary_main !important;
     font-size: .74rem;
 }
+
+.badge {
+    position: absolute !important;
+    top: .5rem;
+    left: 1.5rem;
+    color: colors.$background_paper !important;
+    background-color: colors.$secondary_main !important;
+    width: 3.3rem;
+    border-radius: .3rem;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important;
+
+    svg {
+        transform: scale(0.5) !important;
+    }
+    
+    span {
+        font-weight: bold;
+        margin-top: .1rem;
+        transform: translate(0);
+    }
+}
+
+.countdown {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+    background-color: colors.$secondary_main !important;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    text-align: center;
+    color: colors.$background_paper !important;
+    font-weight: bold;
+    padding: .2rem 0;
+}

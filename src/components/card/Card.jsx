@@ -1,15 +1,13 @@
 import styles from "./Card.module.scss"
-import MuiCard from "@mui/material/Card"
-import CardMedia from "@mui/material/CardMedia"
-import CardContent from "@mui/material/CardContent"
-import CardHeader from "@mui/material/CardHeader"
 import Avatar from "../avatar/Avatar"
-import Chip from "@mui/material/Chip"
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import Grid from "@mui/material/Grid"
+import LiveIcon from '@mui/icons-material/FiberManualRecord';
+import MuiCard from "@mui/material/Card"
+import { CardMedia, CardContent, CardHeader, Chip, Grid, Badge } from "@mui/material"
 import millify from "millify"
+import Countdown from "react-countdown"
 
-function Card({name, likes=0, mediaUrl, user, price, currency}){
+function Card({name, likes=0, mediaUrl, user, price, currency, timeLeft}){
     return (
         <MuiCard className={styles.card}>
             <CardHeader
@@ -17,10 +15,26 @@ function Card({name, likes=0, mediaUrl, user, price, currency}){
                     <Avatar size={30} url={user.avatarUrl} verified={user.verified} />
                 }
             />
-            <CardMedia className={styles.media} 
-                component="img"
-                image={mediaUrl}
-            />
+            <div style={{position: "relative"}}>
+                <CardMedia className={styles.media} 
+                    component="img"
+                    image={mediaUrl}
+                />
+                {timeLeft && (
+                <>
+                    <Badge 
+                        className={styles.badge}
+                        badgeContent={"Live".toUpperCase()}
+                    >
+                        <LiveIcon />
+                    </Badge>
+                    <div className={styles.countdown}>
+                        <Countdown date={Date.now() + timeLeft} />
+                    </div>
+                </>
+                )}
+                
+            </div>
             <CardContent>
                 <Grid container>
                     <Grid item xs={8}>
