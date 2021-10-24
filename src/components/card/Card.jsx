@@ -1,12 +1,8 @@
 import styles from "./Card.module.scss"
-import MuiCard from "@mui/material/Card"
-import CardMedia from "@mui/material/CardMedia"
-import CardContent from "@mui/material/CardContent"
-import CardHeader from "@mui/material/CardHeader"
 import Avatar from "../avatar/Avatar"
-import Chip from "@mui/material/Chip"
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import Grid from "@mui/material/Grid"
+import MuiCard from "@mui/material/Card"
+import { CardMedia, CardContent, CardHeader, Chip, Grid } from "@mui/material"
 import millify from "millify"
 
 function Card({name, likes=0, mediaUrl, user, price, currency}){
