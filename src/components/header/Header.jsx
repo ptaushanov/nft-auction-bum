@@ -8,7 +8,7 @@ import styles from "./Header.module.scss"
 
 function Header(){
     return (
-        <div className={styles.Header} style={{display: "flex", justifyContent: "center"}}>
+        <div className={styles.Header}>
             <Grid className={styles.container} container spacing={6}>
                 <Grid item style={{marginBottom: "-0.5rem"}}>
                     <Logo/>
