@@ -1,22 +1,13 @@
 @use "../../styles/colors";
 
-.Header {
+.Footer {
     display: flex;
     justify-content: center;
     background-color: colors.$background_paper;
-}
-
-.searchInput {
-    flex: 1;
-}
-
-.searchIcon {
-    padding: 3px;
-    margin-left: 5px;
-}
-
-.searchPaper {
-    background-color: colors.$background_default !important;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 .container {
@@ -29,4 +20,8 @@
     color: colors.$text_primary !important;
     font-size: 8pt !important;
     text-transform: none !important;
+}
+
+.rights {
+    padding: 0 5rem;
 }
