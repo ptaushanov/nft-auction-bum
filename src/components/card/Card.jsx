@@ -6,6 +6,7 @@ import MuiCard from "@mui/material/Card"
 import { CardMedia, CardContent, CardHeader, Chip, Grid, Badge } from "@mui/material"
 import millify from "millify"
 import Countdown from "react-countdown"
+import { Fragment } from "react";
 
 function Card({name, likes=0, mediaUrl, user, price, currency, timeLeft}){
     return (
@@ -21,7 +22,7 @@ function Card({name, likes=0, mediaUrl, user, price, currency, timeLeft}){
                     image={mediaUrl}
                 />
                 {timeLeft && (
-                <>
+                <Fragment>
                     <Badge 
                         className={styles.badge}
                         badgeContent={"Live".toUpperCase()}
@@ -31,7 +32,7 @@ function Card({name, likes=0, mediaUrl, user, price, currency, timeLeft}){
                     <div className={styles.countdown}>
                         <Countdown date={Date.now() + timeLeft} />
                     </div>
-                </>
+                </Fragment>
                 )}
                 
             </div>
