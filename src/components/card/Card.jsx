@@ -10,7 +10,7 @@ import { Fragment } from "react";
 
 function Card({name, likes=0, mediaUrl, user, price, currency, timeLeft}){
     return (
-        <MuiCard className={styles.card}>
+        <MuiCard className={`${styles.card} ${timeLeft && styles.live}`}>
             <CardHeader
                 avatar={
                     <Avatar size={30} url={user.avatarUrl} verified={user.verified} />

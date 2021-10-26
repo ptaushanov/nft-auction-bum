@@ -5,6 +5,10 @@
     background-color: colors.$background_paper !important;
 }
 
+.live {
+    background-color: rgba(colors.$secondary_main, 0.15) !important;
+}
+
 .media {
     width: 90% !important;
     margin: auto;
@@ -13,6 +17,7 @@
 
 .likes {
     color: colors.$secondary_main !important;
+    background-color: rgba(colors.$secondary_main, 0.18) !important;
     border-color: colors.$secondary_main !important;
     margin: auto !important;
     float: right;
