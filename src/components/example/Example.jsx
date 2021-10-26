@@ -17,6 +17,7 @@ export default function Copyright() {
           mediaUrl:"./images/nft.jpg",
           price: 1,
           currency:"ETH",
+          likes: 4689,
           timeLeft: 345600
         },
         {
@@ -25,6 +26,7 @@ export default function Copyright() {
           mediaUrl:"./images/nft.jpg",
           price: 2.3,
           currency:"ETH",
+          likes: 693000,
           timeLeft: 10000000
         },
         {
@@ -39,6 +41,7 @@ export default function Copyright() {
           user:{avatarUrl:"./images/avatar.png", verified:true},
           mediaUrl:"./images/nft.jpg",
           price: 10,
+          likes: 52000,
           currency:"ETH",
         },
       ]}/>
