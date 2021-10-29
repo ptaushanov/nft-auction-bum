@@ -6,20 +6,19 @@ function Footer(){
     return (
         <div className={styles.Footer}>
             <Container>
-                <Grid container spacing={8}>
+                <Grid container>
                     <Grid item md={4} style={{marginBottom: "-0.5rem"}}>
                         <Logo type={"muted"}/>
                     </Grid>
                     <Grid item md={4} sx={{display:"flex"}}>
                         <p className={styles.rights}>Bum All Rights Reserved 2021</p>
                     </Grid>
-                    <Grid item md={4} sx={{display:"flex"}}>
+                    <Grid item md={4} sx={{display:"flex", justifyContent:"flex-end"}}>
                         <Button className={styles.menuItem} variant={"text"}>Privacy Policy</Button>
                         <Button className={styles.menuItem} variant={"text"}>Cookie Policy</Button>
                     </Grid>
                 </Grid>
             </Container>
-            
         </div>
     )
 }
