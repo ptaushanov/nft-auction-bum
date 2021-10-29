@@ -1,0 +1,32 @@
+@use "../../styles/colors";
+
+.How {
+    width: 50%; // temporary
+    margin: auto; // temporary
+    margin-top: 2rem; // temporary
+    border-radius: 1rem;
+}
+
+.number {
+    background-color: rgba(colors.$background_paper, 0.9);
+    color: rgba(colors.$text_primary, 0.1);
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.main{
+    background-color: colors.$background_paper;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding: 2rem;
+
+    h2{
+
+    }
+
+    p{
+        color: colors.$text_secondary;
+    }
+}
