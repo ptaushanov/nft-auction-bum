@@ -1,0 +1,13 @@
+@use "../../styles/colors";
+
+.How {
+    background-color: colors.$primary_main;
+    margin: 4rem 0;
+}
+
+.steps {
+    margin: {
+        top: -4rem !important;
+        bottom: -4rem !important;
+    };
+}

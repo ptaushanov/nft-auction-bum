@@ -1,12 +1,30 @@
 import Header from "../header/Header";
 import Footer from "../footer/Footer"
-import Step from "../step/Step"
+import How from "../how/How"
 
 export default function Copyright() {
   return (
     <div>
       <Header />
-      <Step title={"Some title"} number={1} description={"Voluptate duis voluptate sit ea dolor minim laboris ea enim. In sunt quis anim consectetur amet aliquip anim labore quis consectetur aute ipsum tempor officia. Qui duis cillum enim ex proident consectetur amet Lorem consequat exercitation in excepteur."}/>
+        <How 
+          title=""
+          description=""
+          items={[
+            {
+              title:"Digital Currency",
+              description:"You can get ETH and digital currency that fuels transactions on the Etherium blockchain from a digital currency exchange"
+            },
+            {
+              title:"Digital Currency",
+              description:"You can get ETH and digital currency that fuels transactions on the Etherium blockchain from a digital currency exchange"
+            },
+            {
+              title:"Digital Currency",
+              description:"You can get ETH and digital currency that fuels transactions on the Etherium blockchain from a digital currency exchange"
+            }
+          ]}
+          link=""
+        />
       <Footer />
     </div>
   );
