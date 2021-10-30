@@ -8,21 +8,25 @@ export default function Copyright() {
       <Header />
         <How 
           title="How it works"
-          description="Irure ex et quis tempor elit voluptate nostrud. Sunt dolor est incididunt sunt quis magna non ut. Id sit in eiusmod id aute velit ad consequat. Reprehenderit irure ex do dolor nostrud culpa tempor ullamco pariatur sint. Nulla dolor et non exercitation. Aliqua excepteur culpa reprehenderit minim non enim do sint culpa anim. Elit ex qui quis eu nisi ex consectetur dolor."
-          items={[
-            {
-              title:"Digital Currency",
-              description:"You can get ETH and digital currency that fuels transactions on the Etherium blockchain from a digital currency exchange"
+          description="Discover, collect, and sell extraordinary NFTs on the world's first and largest NFT marketplace. There are  three things you'll need in place to open your account and start buying or selling NFTs on BUM."
+
+          items={
+            [{
+              title: "Digital Currency",
+              description:
+                "You can get ETH, the digital currency that fuels transactions on the Ethereum blockchain, from a digital currency exchange",
             },
             {
-              title:"Digital Currency",
-              description:"You can get ETH and digital currency that fuels transactions on the Etherium blockchain from a digital currency exchange"
+              title: "Crypto Wallet",
+              description:
+                "A crypto wallet, such as MetaMask, stores your ETH and processes transactions on the Ethereum blockchain.",
             },
             {
-              title:"Digital Currency",
-              description:"You can get ETH and digital currency that fuels transactions on the Etherium blockchain from a digital currency exchange"
-            }
-          ]}
+              title: "BUM.",
+              description:
+                "Let's connect your wallet to BUM, edit your profile, and begin interacting in the space.",
+            }]
+          }
           link="https://www.google.com"
         />
       <Footer />

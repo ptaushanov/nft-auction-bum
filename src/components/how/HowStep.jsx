@@ -1,7 +1,7 @@
-import styles from "./Step.module.scss"
+import styles from "./HowStep.module.scss"
 import { Grid } from "@mui/material"
 
-function Step({number, title, description}){
+function HowStep({number, title, description}){
     return (
         <div className={styles.How}>
             <Grid container>
@@ -21,4 +21,4 @@ function Step({number, title, description}){
     )
 }
 
-export default Step;
+export default HowStep;
