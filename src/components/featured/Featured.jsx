@@ -2,7 +2,7 @@ import { Container, ImageList, ImageListItem } from "@mui/material";
 import { useRouter } from "next/router";
 import styles from "./Featured.module.scss"
 
-function Featured({items = []}){
+export default function Featured({items = []}){
 
     const router = useRouter();
     const changeRoute = path => router.push(path);
@@ -29,5 +29,3 @@ function Featured({items = []}){
         </div>
     )
 }
-
-export default Featured;
