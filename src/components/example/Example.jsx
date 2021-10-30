@@ -1,6 +1,6 @@
 import Header from "../header/Header";
 import Footer from "../footer/Footer"
-import CollectorColumn from "../colectors/CollectorColumn";
+import CollectorColumn from "../collectors/CollectorColumn";
 
 export default function Copyright() {
   return (
