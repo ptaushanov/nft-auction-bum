@@ -1,8 +1,8 @@
 import styles from "./How.module.scss"
 import { Grid, Container, Button } from "@mui/material"
-import Step from "../step/Step"
+import HowStep from "./HowStep"
 
-function How({description, title, items=[], link}){
+function How({title, description, items=[], link}){
     return (
         <div className={styles.How}>
             <Container>
@@ -20,7 +20,7 @@ function How({description, title, items=[], link}){
                     </Grid>
                     <Grid item md={5} className={styles.steps}>
                         {items.map((item, index) => (
-                            <Step
+                            <HowStep
                                 key={index}
                                 number={index+1}
                                 title={item.title}
