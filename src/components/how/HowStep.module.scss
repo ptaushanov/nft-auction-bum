@@ -2,14 +2,16 @@
 
 .How {
     margin: 2rem;
+    background-color: colors.$background_paper;
+    border-radius: 1rem;
 }
 
 .number {
-    background-color: rgba(colors.$background_paper, 0.9);
-    color: rgba(colors.$text_primary, 0.1);
+    background-color: rgba(colors.$primary_main, 10%);
+    color: colors.$text_primary;
     border-bottom-left-radius: 1rem;
     border-top-left-radius: 1rem;
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-weight: bold;
 
     p {
