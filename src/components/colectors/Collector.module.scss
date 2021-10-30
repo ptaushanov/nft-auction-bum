@@ -1,0 +1,39 @@
+@use "../../styles/colors.scss";
+
+.Collector {
+    min-width: 16rem // temp
+}
+
+.container{}
+
+
+.number {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1.3rem;
+    background-color: rgba(colors.$primary_main, 35%);
+    
+    p {
+        font-weight: bold;
+        font-size: 1.2rem ;
+        line-height: normal;
+    }
+}
+
+.light {
+    .number {
+        background-color: rgba(colors.$primary_main, 50%);
+    }
+
+    .main {
+        background-color: rgba(colors.$primary_main, 30%);
+    }
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    background-color: rgba(colors.$primary_main, 15%);
+    padding: .5rem 1rem !important;
+}
