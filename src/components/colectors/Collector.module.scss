@@ -1,16 +1,18 @@
 @use "../../styles/colors.scss";
 
 .Collector {
-    width: 20%; // temp
-    margin: 4rem; //temp
+    min-width: 16rem // temp
 }
 
 .container{}
 
+
 .number {
-    display: grid;
-    place-items: center;
-    background-color: rgba(colors.$primary_main, 50%);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1.3rem;
+    background-color: rgba(colors.$primary_main, 35%);
     
     p {
         font-weight: bold;
@@ -19,9 +21,19 @@
     }
 }
 
+.light {
+    .number {
+        background-color: rgba(colors.$primary_main, 50%);
+    }
+
+    .main {
+        background-color: rgba(colors.$primary_main, 30%);
+    }
+}
+
 .main {
     display: flex;
     align-items: center;
-    background-color: rgba(colors.$primary_main, 30%);
+    background-color: rgba(colors.$primary_main, 15%);
     padding: .5rem 1rem !important;
 }
