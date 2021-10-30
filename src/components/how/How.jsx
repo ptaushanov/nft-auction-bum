@@ -2,7 +2,7 @@ import styles from "./How.module.scss"
 import { Grid, Container, Button } from "@mui/material"
 import HowStep from "./HowStep"
 
-function How({description, title, items=[], link}){
+function How({title, description, items=[], link}){
     return (
         <div className={styles.How}>
             <Container>
