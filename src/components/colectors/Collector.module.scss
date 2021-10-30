@@ -1,0 +1,27 @@
+@use "../../styles/colors.scss";
+
+.Collector {
+    width: 20%; // temp
+    margin: 4rem; //temp
+}
+
+.container{}
+
+.number {
+    display: grid;
+    place-items: center;
+    background-color: rgba(colors.$primary_main, 50%);
+    
+    p {
+        font-weight: bold;
+        font-size: 1.2rem ;
+        line-height: normal;
+    }
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    background-color: rgba(colors.$primary_main, 30%);
+    padding: .5rem 1rem !important;
+}

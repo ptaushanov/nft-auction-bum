@@ -7,7 +7,7 @@ function Header(){
     return (
         <div className={styles.Header}>
             <Container>
-                <Grid className={styles.container} container>
+                <Grid container>
                     <Grid item  md={2} sx={{marginBottom: "-0.5rem"}}>
                         <Logo/>
                     </Grid>
