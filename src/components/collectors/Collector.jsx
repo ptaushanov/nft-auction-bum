@@ -3,10 +3,11 @@ import styles from "./Collector.module.scss"
 import { Grid } from "@mui/material"
 
 export default function Collector({name, nftsCount, avatar, verified, id, type}){
+    const checkType = type => type === "light" ? styles.light : undefined;
     return (
         <div className={styles.Collector}>
             <div className={styles.container}>
-                <Grid container className={type === "light" && styles.light}>
+                <Grid container className={checkType(type)}>
                     <Grid item className={styles.number} xs={3}>
                         <p>{id}</p>
                     </Grid>
