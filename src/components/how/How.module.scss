@@ -1,0 +1,43 @@
+@use "../../styles/colors";
+
+.How {
+    background-color: colors.$primary_main;
+    margin: 4rem 0;
+}
+
+.steps {
+    margin: {
+        top: -4rem !important;
+        bottom: -4rem !important;
+    };
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    padding: {
+        top: 2rem;
+        bottom: 2rem;
+        left: 0;
+        right: 6rem;
+    }
+    
+}
+
+.title {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 3rem;
+    line-height: 2rem;
+}
+
+.description {
+    font-size: .8rem;
+}
+
+.button {
+    text-transform: uppercase !important;
+    margin-top: 2rem !important;
+    color: colors.$primary_main !important;
+    background-color: colors.$text_primary !important;
+}

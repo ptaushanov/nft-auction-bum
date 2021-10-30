@@ -1,5 +1,5 @@
 function Logo({type}) {
-    const styles = { width: "100px", padding: "10px 0" };
+    const styles = { width: "6rem", padding: "10px 0" };
 
     return (
         <div className="Logo">

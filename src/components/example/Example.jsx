@@ -1,50 +1,31 @@
 import Header from "../header/Header";
-import Auctions from "../auctions/Auctions";
 import Footer from "../footer/Footer"
+import How from "../how/How"
 
 export default function Copyright() {
   return (
     <div>
       <Header />
-      <Auctions cards={[
-        {
-          name:"Ivy",
-          user:{avatarUrl:"./images/avatar.png", verified:true},
-          mediaUrl:"./images/nft.jpg",
-          price: 1,
-          currency:"ETH",
-          likes: 4689,
-          timeLeft: 345600
-        },
-        {
-          name:"Judie",
-          user:{avatarUrl:"./images/avatar.png", verified:true},
-          mediaUrl:"./images/nft.jpg",
-          price: 2.3,
-          currency:"ETH",
-          likes: 693000,
-          timeLeft: 10000000
-        },
-        {
-          name:"Juniper",
-          user:{avatarUrl:"./images/avatar.png", verified:true},
-          mediaUrl:"./images/nft.jpg",
-          price:5,
-          currency:"ETH",
-          timeLeft: 84300
-        },
-        {
-          name:"Maple",
-          user:{avatarUrl:"./images/avatar.png", verified:true},
-          mediaUrl:"./images/nft.jpg",
-          price: 10,
-          likes: 52000,
-          currency:"ETH",
-          timeLeft: 135600
-        },
-      ]}/>
-
-    <Footer />
+        <How 
+          title="How it works"
+          description="Irure ex et quis tempor elit voluptate nostrud. Sunt dolor est incididunt sunt quis magna non ut. Id sit in eiusmod id aute velit ad consequat. Reprehenderit irure ex do dolor nostrud culpa tempor ullamco pariatur sint. Nulla dolor et non exercitation. Aliqua excepteur culpa reprehenderit minim non enim do sint culpa anim. Elit ex qui quis eu nisi ex consectetur dolor."
+          items={[
+            {
+              title:"Digital Currency",
+              description:"You can get ETH and digital currency that fuels transactions on the Etherium blockchain from a digital currency exchange"
+            },
+            {
+              title:"Digital Currency",
+              description:"You can get ETH and digital currency that fuels transactions on the Etherium blockchain from a digital currency exchange"
+            },
+            {
+              title:"Digital Currency",
+              description:"You can get ETH and digital currency that fuels transactions on the Etherium blockchain from a digital currency exchange"
+            }
+          ]}
+          link="https://www.google.com"
+        />
+      <Footer />
     </div>
   );
 }

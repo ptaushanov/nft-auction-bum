@@ -1,8 +1,6 @@
 @use "../../styles/colors";
 
 .Footer {
-    display: flex;
-    justify-content: center;
     background-color: colors.$background_paper;
     position: fixed;
     left: 0;
@@ -10,18 +8,16 @@
     width: 100%;
 }
 
-.container {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-}
-
 .menuItem {
     color: colors.$text_primary !important;
-    font-size: 8pt !important;
+    font-size: .7rem !important;
     text-transform: none !important;
+    align-self: center !important;
 }
 
 .rights {
-    padding: 0 5rem;
+    font-size: .8rem;
+    align-self: center;
+    width: 100%;
+    text-align: center;
 }
