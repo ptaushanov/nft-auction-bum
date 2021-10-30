@@ -1,7 +1,6 @@
 import Header from "../header/Header";
 import Featured from "../featured/Featured";
 import Footer from "../footer/Footer"
-import How from "../how/How"
 
 export default function Copyright() {
   return (
