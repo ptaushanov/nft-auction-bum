@@ -1,0 +1,10 @@
+@use "../../styles/colors.scss";
+
+.TopCollectors {
+    background-color: rgba(colors.$primary_main, 10%);
+    padding-bottom: 2.5rem;
+}
+
+.select {
+    align-self: center;
+}
