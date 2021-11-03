@@ -8,7 +8,7 @@ import millify from "millify"
 import Countdown from "react-countdown"
 import { Fragment } from "react";
 
-function Card({name, likes=0, mediaUrl, user, price, currency, timeLeft}){
+export default function Card({name, likes=0, mediaUrl, user, price, currency, timeLeft}){
     return (
         <MuiCard className={`${styles.card} ${timeLeft && styles.live}`}>
             <CardHeader
@@ -54,5 +54,3 @@ function Card({name, likes=0, mediaUrl, user, price, currency, timeLeft}){
         </MuiCard>
     )
 }
-
-export default Card;

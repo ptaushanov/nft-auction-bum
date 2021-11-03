@@ -2,7 +2,7 @@ import styles from "./Trending.module.scss"
 import { FormControl, Grid, Select, MenuItem, Container, InputLabel } from "@mui/material"
 import Card from "../card/Card"
 
-function Trending({cards=[]}){
+export default function Trending({cards=[]}){
     return (
         <div className="Trending">
             <Container>
@@ -31,5 +31,3 @@ function Trending({cards=[]}){
         </div>
     )
 }
-
-export default Trending;

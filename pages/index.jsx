@@ -11,7 +11,7 @@ import dataTrending from "../data/trending.json"
 import dataUsers from "../data/users.json"
 import dataNfts from "../data/nfts.json"
 
-import { Fragment, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 
 export default function Index() {
@@ -21,54 +21,54 @@ export default function Index() {
   const [topCollectors, setTopCollectors] = useState([])
   const [nfts, setNfts] = useState([])
 
-  useEffect(()=>{
-    const processedFeatured = dataFeatured.map((card, index) => { return {image: card.source.url}})
-    processedFeatured[0] = {...processedFeatured[0], cols:3, rows: 2}
-    setFeaturedCards(processedFeatured)
+  // useEffect(()=>{
+  //   const processedFeatured = dataFeatured.map(card => { return {image: card.source.url}})
+  //   processedFeatured[0] = {...processedFeatured[0], cols:3, rows: 2}
+  //   setFeaturedCards(processedFeatured)
     
-    setTrendingCards(dataTrending.map(card => {
-      return {
-        name: card.name,
-        likes:card.likes,
-        mediaUrl: card.source.url,
-        user:{
-          avatarUrl: card.owner.avatar.url,
-          verified: card.owner.verified
-        },
-        price: card.price,
-        currency: card.currency
-      }
-    }));
+  //   setTrendingCards(dataTrending.map(card => {
+  //     return {
+  //       name: card.name,
+  //       likes:card.likes,
+  //       mediaUrl: card.source.url,
+  //       user:{
+  //         avatarUrl: card.owner.avatar.url,
+  //         verified: card.owner.verified
+  //       },
+  //       price: card.price,
+  //       currency: card.currency
+  //     }
+  //   }));
 
-    setNfts(dataNfts.map(nft => {
-      return {
-        name: nft.name,
-        likes:nft.likes,
-        mediaUrl: nft.source.url,
-        user:{
-          avatarUrl: nft.owner.avatar.url,
-          verified: nft.owner.verified
-        },
-        price: nft.price,
-        currency: nft.currency,
-        timeLeft: Math.abs(Date.parse(nft.auction_end) - Date.now())
-      }
-    }));
+  //   setNfts(dataNfts.map(nft => {
+  //     return {
+  //       name: nft.name,
+  //       likes:nft.likes,
+  //       mediaUrl: nft.source.url,
+  //       user:{
+  //         avatarUrl: nft.owner.avatar.url,
+  //         verified: nft.owner.verified
+  //       },
+  //       price: nft.price,
+  //       currency: nft.currency,
+  //       timeLeft: Math.abs(Date.parse(nft.auction_end) - Date.now())
+  //     }
+  //   }));
 
-    setTopCollectors(dataUsers.map(user => {
-      return {
-        name: user.username,
-        nftsCount: user.nfts.length,
-        avatar: user.avatar.url,
-        verified: user.verified
-      }
-    }))
+  //   setTopCollectors(dataUsers.map(user => {
+  //     return {
+  //       name: user.username,
+  //       nftsCount: user.nfts.length,
+  //       avatar: user.avatar.url,
+  //       verified: user.verified
+  //     }
+  //   }))
 
-  },[])
+  // },[])
 
 
   return (
-    <Fragment>
+    <div>
       <Header/>
       <Featured items={featuredCards} />
       <Trending cards={trendingCards}/>
@@ -97,6 +97,6 @@ export default function Index() {
         link="https://app.boom.dev"/>
       <Auctions cards={nfts}/>
       <Footer/>
-    </Fragment>
+    </div>
   )
 }
