@@ -2,7 +2,7 @@ import styles from "./Auctions.module.scss"
 import { FormControl, Grid, Select, MenuItem, Container, InputLabel } from "@mui/material"
 import Card from "../card/Card"
 
-function Auctions({cards=[]}){
+export default function Auctions({cards=[]}){
     return (
         <div className="Auctions">
             <Container>
@@ -30,5 +30,3 @@ function Auctions({cards=[]}){
         </div>
     )
 }
-
-export default Auctions;

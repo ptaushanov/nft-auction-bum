@@ -3,7 +3,7 @@ import SearchIcon from "@mui/icons-material/Search"
 import Logo from "../logo/Logo"
 import styles from "./Header.module.scss"
 
-function Header(){
+export default function Header(){
     return (
         <div className={styles.Header}>
             <Container>
@@ -27,5 +27,3 @@ function Header(){
         </div>
     )
 }
-
-export default Header;

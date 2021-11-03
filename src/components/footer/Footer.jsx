@@ -2,7 +2,7 @@ import styles from "./Footer.module.scss"
 import { Grid, Button, Container } from "@mui/material"
 import Logo from "../logo/Logo"
 
-function Footer(){
+export default function Footer(){
     return (
         <div className={styles.Footer}>
             <Container>
@@ -22,5 +22,3 @@ function Footer(){
         </div>
     )
 }
-
-export default Footer;
