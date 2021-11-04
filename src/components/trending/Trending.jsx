@@ -4,7 +4,7 @@ import Card from "../card/Card"
 
 export default function Trending({cards=[]}){
     return (
-        <div className="Trending">
+        <div className={styles.Trending}>
             <Container>
                 <Grid container>
                     <Grid item xs={10}>

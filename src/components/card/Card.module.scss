@@ -13,6 +13,7 @@
     width: 90% !important;
     margin: auto;
     border-radius: 1rem;
+    height: 14.5rem; // Quick fix
 }
 
 .likes {
@@ -22,6 +23,7 @@
     margin: auto !important;
     float: right;
     border-width: 2px !important;
+    font-size: 0.875rem !important;
 
     span {
         padding-left: .5rem;
@@ -39,12 +41,13 @@
 }
 
 .title {
-    font-size: .9rem;
+    font-size: 1rem;
+    padding-right: 1rem;
 }
 
 .price{
     color: colors.$secondary_main !important;
-    font-size: .74rem;
+    font-size: 0.875rem !important;
 }
 
 .badge {
@@ -82,4 +85,8 @@
     color: colors.$background_paper !important;
     font-weight: bold;
     padding: .2rem 0;
+}
+
+.title, .likes, .media {
+    cursor: pointer !important;
 }
