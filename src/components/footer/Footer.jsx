@@ -7,7 +7,7 @@ export default function Footer(){
         <div className={styles.Footer}>
             <Container>
                 <Grid container>
-                    <Grid item md={4} style={{marginBottom: "-0.5rem"}}>
+                    <Grid item md={4}>
                         <Logo type={"muted"}/>
                     </Grid>
                     <Grid item md={4} sx={{display:"flex"}}>
