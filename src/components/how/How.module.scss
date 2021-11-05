@@ -2,37 +2,34 @@
 
 .How {
     background-color: colors.$primary_main;
-    margin: 4rem 0;
+    padding: 5.8rem 0;
 }
 
 .steps {
     margin: {
-        top: -4rem !important;
-        bottom: -4rem !important;
+        top: -9.8rem !important;
+        bottom: -9.8rem !important;
     };
 }
 
 .info {
     display: flex;
     align-items: center;
-    padding: {
-        top: 2rem;
-        bottom: 2rem;
-        left: 0;
-        right: 6rem;
-    }
     
 }
 
 .title {
     text-transform: uppercase;
-    font-weight: bolder;
-    font-size: 3rem;
-    line-height: 2rem;
+    font-weight: 900;
+    font-size: 3.75rem;
+    line-height: 4.563rem;
 }
 
 .description {
-    font-size: .8rem;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    padding-right: 3rem;
+
 }
 
 .button {
@@ -41,5 +38,5 @@
     color: colors.$primary_main !important;
     background-color: colors.$text_primary !important;
     font-weight: bold !important;
-    font-size: .8rem !important;
+    font-size: 1rem !important;
 }
