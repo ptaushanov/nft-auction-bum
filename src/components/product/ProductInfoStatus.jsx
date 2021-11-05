@@ -4,7 +4,7 @@ import Chip from "@mui/material/Chip"
 export default function ProductInfoStatus(){
     return (
         <div className={styles["product-info-status"]}>
-            <Chip class={styles.status} variant="filled" label={"Live".toUpperCase()}/>
+            <Chip className={styles.status} variant="filled" label={"Live".toUpperCase()}/>
         </div>
     )
 }
