@@ -1,0 +1,34 @@
+@use "../../styles/colors.scss";
+
+.product-info-creator {
+    background-color: colors.$background_paper;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    .title-container {
+        background-color: rgba(colors.$primary_main, 10%);
+        padding: {
+            top: .625rem;
+            left: 1.7rem;
+            bottom: .3rem;
+        }
+
+        .title {
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            font-weight: 600;
+            line-height: 1.375rem;
+            margin: 0;
+        }
+    }
+
+    .user-container {
+        padding: {
+            top: 1.188rem;
+            left: 1.688rem;
+            bottom: 1.438rem;
+        };
+    }
+
+}
+
