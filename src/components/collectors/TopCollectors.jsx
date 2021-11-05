@@ -12,7 +12,7 @@ export default function TopCollectors({collectors=[]}){
             <Container>
                 <Grid container>
                     <Grid item xs={10}>
-                        <h1>Top Collectors</h1>
+                        <h1 className={styles.title}>Top Collectors</h1>
                     </Grid>
                     <Grid item xs={2} sx={{display: "flex"}}>
                         <FormControl fullWidth className={styles.select} size="small">
