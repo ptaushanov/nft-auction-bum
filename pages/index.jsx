@@ -62,7 +62,7 @@ export default function Index() {
           avatar: user.avatar.url,
           verified: user.verified
         }
-      }).sort((f,s)=> f.nftsCount < s.nftsCount).slice(0, 24)
+      }).sort((f,s)=> f.nftsCount < s.nftsCount).slice(0, 12)
     )
   },[])
 
