@@ -4,11 +4,11 @@ import Card from "../card/Card"
 
 export default function Auctions({cards=[]}){
     return (
-        <div className="Auctions">
+        <div className={styles.Auctions}>
             <Container>
                 <Grid container>
                     <Grid item xs={10}>
-                        <h1>🔥 Live Auctions</h1>
+                        <h1 className={styles.title}>🔥 Live Auctions</h1>
                     </Grid>
                     <Grid item xs={2} sx={{display: "flex"}}>
                         <FormControl fullWidth className={styles.select} size="small">
