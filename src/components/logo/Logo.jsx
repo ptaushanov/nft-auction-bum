@@ -1,11 +1,12 @@
+import styles from "./Logo.module.scss"
+
 function Logo({type}) {
-    const styles = { width: "6rem", padding: "10px 0" };
 
     return (
-        <div className="Logo">
+        <div className={styles.Logo}>
             { type === "muted" ?
-                <img style={styles} src="./images/logo-muted.svg"/> :
-                <img style={styles} src="./images/logo.svg"/> 
+                <img className={styles.image} src="./images/logo-muted.svg"/> :
+                <img className={styles.image} src="./images/logo.svg"/> 
             }
         </div>
     )

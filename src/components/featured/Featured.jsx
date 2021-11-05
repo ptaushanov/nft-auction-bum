@@ -13,7 +13,7 @@ export default function Featured({items = []}){
                 <ImageList
                     cols={6}
                     variant="quilted"
-                    gap={15}
+                    gap={20}
                 >
                 {items.map(item => (
                         <ImageListItem key={item.image} cols={item.cols || 1} rows={item.rows || 1}>

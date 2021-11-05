@@ -2,21 +2,19 @@
 
 .Footer {
     background-color: colors.$background_paper;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    padding: 1.125rem 0;
 }
 
 .menuItem {
     color: colors.$text_primary !important;
-    font-size: .7rem !important;
+    font-size: 0.875rem !important;
     text-transform: none !important;
     align-self: center !important;
 }
 
 .rights {
-    font-size: .8rem;
+    color: colors.$text_secondary;
+    font-size: 0.875rem;
     align-self: center;
     width: 100%;
     text-align: center;

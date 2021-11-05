@@ -1,5 +1,9 @@
 @use "../../styles/colors";
 
+.User {
+    overflow: hidden;
+}
+
 .user {
     display: flex;
 }
@@ -15,12 +19,14 @@
 
 .name {
     font-weight: bold;
-    font-size: .9rem;
-    color: colors.$text_primary
+    font-size: 1rem;
+    color: colors.$text_primary;
+    line-height: 1rem;
 }
 
 .info {
+    line-height: 1rem;
     font-weight: bold;
-    font-size: .8rem;
+    font-size: 0.875rem;
     color: colors.$secondary_main;
 }

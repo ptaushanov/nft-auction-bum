@@ -12,7 +12,7 @@ export default function Collector({name, nftsCount, avatar, verified, id, type})
                         <p>{id}</p>
                     </Grid>
                     <Grid item className={styles.main} xs={9}>
-                        <User name={name} info={nftsCount + " items"} size={42} avatar={avatar} verified={verified} />
+                        <User name={name} info={nftsCount + " items"} size={53} avatar={avatar} verified={verified} />
                     </Grid>
                 </Grid>
             </div>

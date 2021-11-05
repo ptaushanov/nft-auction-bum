@@ -8,11 +8,11 @@ export default function Header(){
         <div className={styles.Header}>
             <Container>
                 <Grid container>
-                    <Grid item  md={2} sx={{marginBottom: "-0.5rem"}}>
+                    <Grid item  md={2}>
                         <Logo/>
                     </Grid>
                     <Grid item md={5} sx={{display: "flex"}}>
-                        <Paper className={styles.searchPaper} sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width:400}} >
+                        <Paper className={styles.searchPaper} sx={{ p: '0.625rem', display: 'flex', alignItems: 'center', width:"36.25rem"}} >
                             <SearchIcon className = {styles.searchIcon}/>
                             <InputBase className={styles.searchInput}  placeholder="Find items, users and activities"/>
                         </Paper>

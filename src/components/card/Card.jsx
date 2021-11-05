@@ -13,7 +13,7 @@ export default function Card({name, likes=0, mediaUrl, user, price, currency, ti
         <MuiCard className={`${styles.card} ${timeLeft && styles.live}`}>
             <CardHeader
                 avatar={
-                    <Avatar size={30} url={user.avatarUrl} verified={user.verified} />
+                    <Avatar size={33} url={user.avatarUrl} verified={user.verified} />
                 }
             />
             <div style={{position: "relative"}}>

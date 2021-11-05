@@ -2,10 +2,13 @@
 
 .Header {
     background-color: colors.$background_paper;
+    padding: 1.125rem 0;
 }
 
 .searchInput {
     flex: 1;
+    font-size: 1rem;
+    margin-left: .25rem;
 }
 
 .searchIcon {
@@ -20,7 +23,7 @@
 
 .menuItem {
     color: colors.$text_primary !important;
-    font-size: 8pt !important;
+    font-size: 0.875rem !important;
     text-transform: none !important;
     align-self: center;
 }

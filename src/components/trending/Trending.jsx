@@ -4,11 +4,11 @@ import Card from "../card/Card"
 
 export default function Trending({cards=[]}){
     return (
-        <div className="Trending">
+        <div className={styles.Trending}>
             <Container>
                 <Grid container>
                     <Grid item xs={10}>
-                        <h1>Trending</h1>
+                        <h1 className={styles.title}>Trending</h1>
                     </Grid>
                     <Grid item xs={2} sx={{display: "flex"}}>
                         <FormControl fullWidth className={styles.select} size={"small"}>
