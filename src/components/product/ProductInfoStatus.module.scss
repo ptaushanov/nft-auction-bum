@@ -1,0 +1,10 @@
+@use "../../styles/colors.scss";
+
+.product-info-status{
+
+    .status {
+        border-radius: .375rem !important;
+        color: colors.$text_primary !important;
+        background-color: colors.$secondary_main !important;
+    }
+}
