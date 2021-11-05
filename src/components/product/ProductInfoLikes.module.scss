@@ -1,0 +1,11 @@
+@use "../../styles/colors.scss";
+
+.product-info-likes {
+    .likes {
+        border-width: 2px !important;
+        border-color: colors.$secondary_main !important;
+        background-color: rgba(colors.$secondary_main, 20%) !important;
+        color: colors.$secondary_main !important;
+        font-weight: bold !important;
+    }
+}
