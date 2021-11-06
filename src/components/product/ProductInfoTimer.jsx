@@ -2,9 +2,10 @@ import styles from "./ProductInfoTimer.module.scss"
 import Countdown from 'react-countdown';
 import { Fragment } from "react";
 
-export default function ProductInfoTimer({timeEnd=null, onTimeEnd}){
+export default function ProductInfoTimer({timeEnd, onTimeEnd}){
     return (
-        <div className={styles["product-info-timer"]}>
+        <div 
+            className={`${styles["product-info-timer"]} ${timeEnd && styles.active}`}>
             { timeEnd && (
                 <Fragment>
                     <div className={styles.header}>

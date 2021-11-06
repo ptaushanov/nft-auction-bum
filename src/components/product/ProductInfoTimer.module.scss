@@ -1,11 +1,14 @@
 @use "../../styles/colors.scss";
 
+.active {
+    background-color: colors.$secondary_main !important;
+}
+
 .product-info-timer {
-    background-color: colors.$secondary_main;
+    background-color: colors.$background_paper;
     color: colors.$background_paper;
     border-radius: 1rem;
     overflow: hidden;
-    width: 218px; // temp
 
     .header{
         background-color: rgba(colors.$background_default, 10%);
