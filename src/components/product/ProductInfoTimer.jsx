@@ -12,7 +12,7 @@ export default function ProductInfoTimer({timeEnd=null, onTimeEnd}){
                 { timeEnd  && (
                 <Countdown 
                     onComplete={onTimeEnd}
-                    date={Date.now() + timeEnd}
+                    date={timeEnd}
                     renderer = {({ hours, minutes, seconds }) => (
                         <span>{hours}:{minutes}:{seconds}</span>
                     )}
