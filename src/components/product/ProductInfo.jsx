@@ -20,7 +20,7 @@ export default function ProductInfo(props){
             </Stack>
             <Grid container>
                 <Grid item md={7}>
-                    <ProductInfoCreator name={creator}/>
+                    <ProductInfoCreator {...creator} />
                 </Grid>
                 <Grid item md={5}>
                     <ProductInfoTimer timeEnd={timeEnd} onTimeEnd={onTimeEnd}/>
