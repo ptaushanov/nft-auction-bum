@@ -7,22 +7,20 @@ import ProductInfoCreator from "./ProductInfoCreator"
 import ProductInfoTimer from "./ProductInfoTimer"
 import { Stack, Grid } from "@mui/material"
 
-export default function ProductInfo(props){
-    const {title, creator, price, currency, likes, onTimeEnd, timeEnd, isLive} = props;
-
+export default function ProductInfo({title, creator, price, currency, likes, onTimeEnd, timeEnd, isLive}){
     return (
         <div className={styles["product-info"]}>
             <ProductInfoTitle text={title}/>
-            <Stack className={styles.status} direction={"row"}>
+            <Stack className={styles.stats} direction={"row"}>
                 <ProductInfoPrice amount={price} currency={currency}/>
                 {isLive && (<ProductInfoStatus/>)}
                 <ProductInfoLikes amount={likes}/>
             </Stack>
             <Grid container>
-                <Grid item md={7}>
+                <Grid item xs={7}>
                     <ProductInfoCreator {...creator} />
                 </Grid>
-                <Grid item md={5}>
+                <Grid item xs={5}>
                     <ProductInfoTimer timeEnd={timeEnd} onTimeEnd={onTimeEnd}/>
                 </Grid>
             </Grid>
