@@ -17,10 +17,10 @@ export default function ProductInfo({title, creator, price, currency, likes, onT
                 <ProductInfoLikes amount={likes}/>
             </Stack>
             <Grid container>
-                <Grid item md={7}>
+                <Grid item xs={7}>
                     <ProductInfoCreator {...creator} />
                 </Grid>
-                <Grid item md={5}>
+                <Grid item xs={5}>
                     <ProductInfoTimer timeEnd={timeEnd} onTimeEnd={onTimeEnd}/>
                 </Grid>
             </Grid>
