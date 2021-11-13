@@ -1,0 +1,17 @@
+@use "../../styles/colors.scss";
+
+.product-actions {
+    font-size: normal; // temp
+}
+
+.button {
+    font-size: 1rem !important;
+    font-weight: bold !important;
+    line-height: 1.1875rem !important;
+    text-transform: uppercase !important;
+}
+
+.button.bid {
+    border: 2px solid colors.$secondary_main !important;
+    color: colors.$secondary_main !important;
+}
