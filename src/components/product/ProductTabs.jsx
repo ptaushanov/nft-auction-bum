@@ -2,8 +2,7 @@ import styles from './ProductTabs.module.scss'
 import User from "../user/User"
 import { Tab, TableBody, Table, TableRow, TableCell } from "@mui/material"
 import { TabContext, TabList, TabPanel } from "@mui/lab"
-import parseISO from "date-fns/parseISO"
-import formatDistance from 'date-fns/formatDistance'
+import { parseISO, formatDistance } from "date-fns"
 
 import { useState } from 'react'
 
