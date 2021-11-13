@@ -12,6 +12,6 @@
 }
 
 .button.bid {
-    border: 2px solid colors.$secondary_main !important;
-    color: colors.$secondary_main !important;
+    border-width: 2px !important;
+    border-color: colors.$secondary_main !important;
 }

@@ -21,6 +21,7 @@ export default function ProductActions({ isLive, currency, buyAmount, bidAmount,
                         variant={"outlined"}
                         onClick={onBid}
                         className={`${styles.button} ${styles.bid}`}
+                        color={"success"}
                         fullWidth>
                         {`Place bid for ${bidAmount} ${currency}`}
                     </Button>
