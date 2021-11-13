@@ -14,7 +14,7 @@ export default function ProductInfoTimer({timeEnd=null, onTimeEnd}){
                     onComplete={onTimeEnd}
                     date={timeEnd}
                     renderer = {({ hours, minutes, seconds }) => (
-                        <span>{hours}:{minutes}:{seconds}</span>
+                        <span suppressHydrationWarning={true}>{hours}:{minutes}:{seconds}</span>
                     )}
                     />
                 )}
