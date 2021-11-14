@@ -27,8 +27,29 @@ export default function Product() {
           currency={dataNft.currency}
           likes={dataNft.price}
           auction_end={dataNft.auction_end}
-          details={"asdasdasd"}
-          bids={[]}
+          details={
+            "Nisi consequat in ullamco occaecat Lorem incididunt cillum tempor."
+          }
+          bids={[
+            {
+              user: {
+                avatar: "/images/avatar.png",
+                name: "hrisi",
+                verified: true,
+              },
+              amount: 30,
+              date: "2021-10-22T08:29:23.382Z",
+            },
+            {
+              user: {
+                avatar: "/images/avatar.png",
+                name: "maxi",
+                verified: true,
+              },
+              amount: 1000,
+              date: "2021-10-22T08:29:23.382Z",
+            },
+          ]}
           source={dataNft.source}
           isLive={false}
           buyAmount={0}
