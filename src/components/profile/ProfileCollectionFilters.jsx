@@ -1,4 +1,4 @@
-import styles from "./ProfileCollection.module.scss";
+import styles from "./ProfileCollectionFilters.module.scss";
 import {
   FormControl,
   Select,
