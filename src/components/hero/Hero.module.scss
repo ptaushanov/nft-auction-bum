@@ -1,5 +1,14 @@
+@use "../../styles/colors.scss";
+
 .hero {
+    padding-top: 5.5rem;
+    height: 20rem;
+    background-color: colors.$primary_main;
+
     .text {
-        font-weight: normal; // temp
+        text-align: center;
+        text-transform: uppercase !important;
+        font-weight: 900 !important;
+        line-height: 4.571rem !important;
     }
 }
