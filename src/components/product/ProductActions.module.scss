@@ -1,7 +1,7 @@
 @use "../../styles/colors.scss";
 
 .product-actions {
-    font-size: normal; // temp
+    margin-top: 1rem;
 }
 
 .button {
@@ -9,9 +9,23 @@
     font-weight: bold !important;
     line-height: 1.1875rem !important;
     text-transform: uppercase !important;
+    padding: {
+        left: 1rem !important;
+        right: 1rem !important;
+    }
+
+    &:disabled {
+        color: colors.$text_disabled !important;
+        background-color: rgba(colors.$text_disabled, 20%) !important;
+    }
 }
 
 .button.bid {
     border-width: 2px !important;
     border-color: colors.$secondary_main !important;
+
+    &:disabled {
+        background-color: transparent !important;
+        border-color: colors.$text_disabled !important;
+    }
 }

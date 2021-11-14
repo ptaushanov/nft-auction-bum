@@ -1,5 +1,16 @@
+@use "../../styles/colors.scss";
+
 .product-info {
+    .line {
+        height: 3px;
+        color: colors.$primary_main;
+        background-color: colors.$primary_main;
+    }
+
     .stats {
-        font-weight: normal; // temp
+        margin-top: 0.8rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
     }
 }

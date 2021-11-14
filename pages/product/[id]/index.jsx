@@ -25,14 +25,53 @@ export default function Product() {
           owner={dataNft.owner}
           price={dataNft.price}
           currency={dataNft.currency}
-          likes={dataNft.price}
+          likes={dataNft.likes}
           auction_end={dataNft.auction_end}
-          details={"asdasdasd"}
-          bids={[]}
+          details={
+            "Fugiat magna ipsum exercitation consequat pariatur ullamco consequat minim. Sunt velit do pariatur qui ad cillum dolor aute tempor minim et. Occaecat amet cupidatat officia non laboris enim adipisicing ut aliquip duis amet incididunt dolor. Aute magna enim et dolore dolor."
+          }
+          bids={[
+            {
+              user: {
+                avatar: "/images/avatar.png",
+                name: "hrisi",
+                verified: true,
+              },
+              amount: 30,
+              date: "2021-10-22T08:29:23.382Z",
+            },
+            {
+              user: {
+                avatar: "/images/avatar.png",
+                name: "maxi",
+                verified: true,
+              },
+              amount: 1000,
+              date: "2021-10-22T08:29:23.382Z",
+            },
+            {
+              user: {
+                avatar: "/images/avatar.png",
+                name: "hrisi",
+                verified: true,
+              },
+              amount: 30,
+              date: "2021-10-22T08:29:23.382Z",
+            },
+            {
+              user: {
+                avatar: "/images/avatar.png",
+                name: "maxi",
+                verified: true,
+              },
+              amount: 1000,
+              date: "2021-10-22T08:29:23.382Z",
+            },
+          ]}
           source={dataNft.source}
-          isLive={false}
-          buyAmount={0}
-          bidAmount={0}
+          isLive={true}
+          buyAmount={3}
+          bidAmount={1}
           onBuy={() => {}}
           onBid={() => {}}
           onTimeEnd={() => {}}
