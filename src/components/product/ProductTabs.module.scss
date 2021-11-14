@@ -1,11 +1,49 @@
-.product-tabs{
-    font-weight: normal; // temp
-}
+@use "../../styles/colors.scss";
 
-.tab-details {
-    font-weight: normal; // temp
-}
+.product-tabs {
+    margin-top: 2rem;
+    .tab-details {
+        font-size: 0.875rem !important;
+        font-weight: 600 !important;
+    }
 
-.tab-bids {
-    font-weight: normal; // temp
+    .tab-bids {
+        font-size: 0.875rem !important;
+        font-weight: 600 !important;
+    }
+
+    .text-details {
+        padding: 2.5rem 0 0.875rem 0 !important;
+        font-weight: 400 !important;
+        font-size: 1rem !important;
+        line-height: 1.625rem !important;
+        color: colors.$text_secondary !important;
+    }
+
+    .bids-view {
+        padding: 0 0 1rem 0 !important;
+
+        .table-row {
+            &:nth-child(odd) {
+                background-color: rgba(colors.$primary_main, 5%) !important;
+            }
+            &:nth-child(even) {
+                background-color: rgba(colors.$primary_main, 15%) !important;
+            }
+        }
+
+        .cell {
+            font-weight: 700 !important;
+            font-size: 0.875rem !important;
+            color: colors.$text_secondary !important;
+            border-bottom: none;
+        }
+
+        .bid-cell {
+            font-weight: 700 !important;
+            font-size: 0.875rem !important;
+            color: colors.$secondary_main !important;
+            border-bottom: none;
+        }
+    }
 }

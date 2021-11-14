@@ -1,10 +1,18 @@
 @use "../../styles/colors.scss";
 
-.product-info-status{
-
+.product-info-status {
     .status {
-        border-radius: .375rem !important;
-        color: colors.$text_primary !important;
+        border-radius: 0.375rem !important;
+        color: colors.$background_paper !important;
         background-color: colors.$secondary_main !important;
+        font-weight: 700 !important;
+        font-size: 0.875rem !important;
+
+        .icon {
+            color: colors.$background_paper !important;
+            width: 1rem !important;
+            margin-left: 0.5rem !important;
+            margin-right: -0.7rem !important;
+        }
     }
 }

@@ -25,7 +25,7 @@ export default function ProductContainer({
   return (
     <div className={styles["product-container"]}>
       <Container>
-        <Grid container spacing={12}>
+        <Grid container spacing={10}>
           <Grid item xs={6}>
             <ProductImage url={source.url} />
           </Grid>

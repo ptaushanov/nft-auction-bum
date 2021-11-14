@@ -1,5 +1,12 @@
+@use "../../styles/colors.scss";
+
 .product-info-price {
-    p{
+    flex: 1;
+    p {
+        color: colors.$text_secondary;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
         text-transform: uppercase;
+        margin: 0;
     }
 }

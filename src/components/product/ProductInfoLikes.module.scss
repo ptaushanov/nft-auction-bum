@@ -7,5 +7,14 @@
         background-color: rgba(colors.$secondary_main, 20%) !important;
         color: colors.$secondary_main !important;
         font-weight: bold !important;
+        font-size: 0.875rem !important;
+        border-radius: 0.5rem !important;
+
+        .icon {
+            width: 1rem !important;
+            color: colors.$secondary_main !important;
+            margin-left: 0.5rem !important;
+            margin-right: -0.6rem !important;
+        }
     }
 }
