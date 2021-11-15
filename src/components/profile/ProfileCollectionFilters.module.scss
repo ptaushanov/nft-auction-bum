@@ -1,3 +1,13 @@
+@use "../../styles/colors.scss";
+
 .profile-collection-filters {
-    font-weight: normal; // temp
+    .search-icon {
+        color: colors.$text_primary !important;
+        margin-left: 0.5rem !important;
+    }
+    .search {
+        background-color: colors.$background_paper !important;
+        padding: 0.625rem !important;
+        border-radius: 30px;
+    }
 }
