@@ -13,8 +13,8 @@ import { Search } from "@mui/icons-material";
 export default function ProfileCollectionFilters({ filters }) {
   return (
     <div className={styles["profile-collection-filters"]}>
-      <FormControl>
-        <Stack direction={"row"}>
+      <Stack direction={"row"} spacing={2}>
+        <FormControl>
           <InputLabel id="sort-select-label">Sort by</InputLabel>
           <Select
             labelId="sort-select-label"
@@ -27,6 +27,8 @@ export default function ProfileCollectionFilters({ filters }) {
               </MenuItem>
             ))}
           </Select>
+        </FormControl>
+        <FormControl>
           <InputLabel id="range-select-label">Price range</InputLabel>
           <Select
             labelId="range-select-label"
@@ -39,18 +41,20 @@ export default function ProfileCollectionFilters({ filters }) {
               </MenuItem>
             ))}
           </Select>
-          <TextField
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <Search />
-                </InputAdornment>
-              ),
-            }}
-            variant="standard"
-          />
-        </Stack>
-      </FormControl>
+        </FormControl>
+        <TextField
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <Search className={styles["search-icon"]} />
+              </InputAdornment>
+            ),
+            className: styles.search,
+            disableUnderline: true,
+          }}
+          variant="standard"
+        />
+      </Stack>
     </div>
   );
 }
