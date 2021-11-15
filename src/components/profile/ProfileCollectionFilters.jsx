@@ -10,7 +10,12 @@ import {
 } from "@mui/material";
 import { Search } from "@mui/icons-material";
 
+import { useState } from "react";
+
 export default function ProfileCollectionFilters({ filters }) {
+  const [filterValue, setFilterValue] = useState("");
+  const [priceRangeValue, setPriceRangeValue] = useState("");
+
   return (
     <div className={styles["profile-collection-filters"]}>
       <Stack direction={"row"} spacing={2}>
@@ -20,6 +25,8 @@ export default function ProfileCollectionFilters({ filters }) {
             labelId="sort-select-label"
             label="Sort by"
             sx={{ width: "200px" }}
+            value={filterValue}
+            onChange={(e) => setFilterValue(e.target.value)}
           >
             {filters.sort.map((filter, i) => (
               <MenuItem value={filter.value} key={i}>
@@ -34,6 +41,8 @@ export default function ProfileCollectionFilters({ filters }) {
             labelId="range-select-label"
             label="Price range"
             sx={{ width: "200px" }}
+            value={priceRangeValue}
+            onChange={(e) => setPriceRangeValue(e.target.value)}
           >
             {filters.price.map((price, i) => (
               <MenuItem value={price.value} key={i}>
