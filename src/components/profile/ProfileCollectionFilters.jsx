@@ -18,14 +18,14 @@ export default function ProfileCollectionFilters({ filters }) {
 
   return (
     <div className={styles["profile-collection-filters"]}>
-      <Stack direction={"row"} spacing={2}>
+      <Stack direction={"row"} spacing={2} justifyContent={"flex-end"}>
         <FormControl>
           <InputLabel id="sort-select-label">Sort by</InputLabel>
           <Select
             labelId="sort-select-label"
             label="Sort by"
-            sx={{ width: "200px" }}
             value={filterValue}
+            sx={{ minWidth: "13.75rem" }}
             onChange={(e) => setFilterValue(e.target.value)}
           >
             {filters.sort.map((filter, i) => (
@@ -40,8 +40,8 @@ export default function ProfileCollectionFilters({ filters }) {
           <Select
             labelId="range-select-label"
             label="Price range"
-            sx={{ width: "200px" }}
             value={priceRangeValue}
+            sx={{ minWidth: "13.75rem" }}
             onChange={(e) => setPriceRangeValue(e.target.value)}
           >
             {filters.price.map((price, i) => (
@@ -60,6 +60,7 @@ export default function ProfileCollectionFilters({ filters }) {
             ),
             className: styles.search,
             disableUnderline: true,
+            sx: { minWidth: "21.188rem" },
           }}
           variant="standard"
         />

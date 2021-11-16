@@ -16,9 +16,9 @@ export default function Profile() {
     setFilters({ ...dataFiltersProfile });
 
     setProfile({
-      image: "",
+      image: "images/nft.jpg",
       name: dataProfile.username,
-      info: "",
+      info: "Duis labore eiusmod proident consequat et exercitation sint cupidatat ullamco esse minim. Ea dolore enim Lorem nostrud ea pariatur nisi Lorem eu. Consequat consectetur voluptate incididunt deserunt officia.",
       avatar: dataProfile.avatar.url,
       verified: dataProfile.verified,
       user: {
