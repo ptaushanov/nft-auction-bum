@@ -25,7 +25,7 @@ export default function ProfileCollectionFilters({ filters }) {
             labelId="sort-select-label"
             label="Sort by"
             value={filterValue}
-            sx={{ minWidth: "13.75rem" }}
+            sx={{ width: "13.75rem" }}
             onChange={(e) => setFilterValue(e.target.value)}
           >
             {filters.sort.map((filter, i) => (
@@ -60,7 +60,7 @@ export default function ProfileCollectionFilters({ filters }) {
             ),
             className: styles.search,
             disableUnderline: true,
-            sx: { minWidth: "21.188rem" },
+            sx: { width: "21.188rem" },
           }}
           variant="standard"
         />
