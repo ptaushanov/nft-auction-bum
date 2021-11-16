@@ -5,7 +5,7 @@ import ProfileCollection from "../../src/components/profile/ProfileCollection";
 import Footer from "../../src/components/footer/Footer";
 import dataProfile from "../../data/profile.json";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 
 export default function Profile() {
   const [profile, setProfile] = useState(null);
@@ -50,7 +50,7 @@ export default function Profile() {
     <div>
       <Header />
       {profile && (
-        <>
+        <Fragment>
           <ProfileHero image={profile.image} />
           <ProfileUser
             name={profile.name}
@@ -63,7 +63,7 @@ export default function Profile() {
             filters={profile.filters}
             items={profile.items}
           />
-        </>
+        </Fragment>
       )}
       <Footer />
     </div>
