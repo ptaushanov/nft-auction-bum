@@ -3,7 +3,7 @@ import ProfileCollectionFilters from "./ProfileCollectionFilters";
 import Card from "../card/Card";
 import { Container, Grid, Typography } from "@mui/material";
 
-export default function ProfileCollection({ user, filters, items }) {
+export default function ProfileCollection({ user, filters, items = [] }) {
   return (
     <div className={styles["profile-collection"]}>
       <Container>
@@ -26,8 +26,8 @@ export default function ProfileCollection({ user, filters, items }) {
                 price={item.price}
                 currency={item.currency}
                 user={{
-                  verified: false,
-                  avatarUrl: user.avatar.url,
+                  verified: user.verified,
+                  avatarUrl: user.avatar,
                 }}
                 timeLeft={3000}
               />
