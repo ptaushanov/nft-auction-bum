@@ -4,17 +4,21 @@ import ProfileUser from "../../src/components/profile/ProfileUser";
 import ProfileCollection from "../../src/components/profile/ProfileCollection";
 import Footer from "../../src/components/footer/Footer";
 import dataProfile from "../../data/profile.json";
+import dataFiltersProfile from "../../data/filtersProfile.json";
 
 import { useState, useEffect, Fragment } from "react";
 
 export default function Profile() {
   const [profile, setProfile] = useState(null);
+  const [filters, setFilters] = useState(null);
 
   useEffect(() => {
+    setFilters({ ...dataFiltersProfile });
+
     setProfile({
-      image: "",
+      image: "images/nft.jpg",
       name: dataProfile.username,
-      info: "",
+      info: "Duis labore eiusmod proident consequat et exercitation sint cupidatat ullamco esse minim. Ea dolore enim Lorem nostrud ea pariatur nisi Lorem eu. Consequat consectetur voluptate incididunt deserunt officia.",
       avatar: dataProfile.avatar.url,
       verified: dataProfile.verified,
       user: {
@@ -22,34 +26,14 @@ export default function Profile() {
         avatar: dataProfile.avatar.url,
       },
       items: [...dataProfile.nfts],
-      filters: {
-        sort: [
-          { label: "Date (Ascending)", value: 1 },
-          { label: "Date (Descending)", value: 2 },
-          { label: "Name (Ascending)", value: 3 },
-          { label: "Name (Descending)", value: 4 },
-          { label: "Price (Ascending)", value: 5 },
-          { label: "Price (Descending)", value: 6 },
-        ],
-        price: [
-          { label: "0 - 0.01 ETH", value: 7 },
-          {
-            label: "0.01 - 0.04 ETH",
-            value: 8,
-          },
-          {
-            label: "0.04 - 0.07 ETH",
-            value: 9,
-          },
-        ],
-      },
+      filters: filters,
     });
   }, []);
 
   return (
     <div>
       <Header />
-      {profile && (
+      {filters && profile && (
         <Fragment>
           <ProfileHero image={profile.image} />
           <ProfileUser
@@ -60,7 +44,7 @@ export default function Profile() {
           />
           <ProfileCollection
             user={profile.user}
-            filters={profile.filters}
+            filters={filters}
             items={profile.items}
           />
         </Fragment>

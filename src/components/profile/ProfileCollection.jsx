@@ -9,14 +9,16 @@ export default function ProfileCollection({ user, filters, items = [] }) {
       <Container>
         <Grid container>
           <Grid item xs={3}>
-            <Typography variant={"h3"}>Collection</Typography>
+            <Typography variant={"h3"} className={styles.title}>
+              Collection
+            </Typography>
           </Grid>
           <Grid item xs={9}>
             <ProfileCollectionFilters filters={filters} />
           </Grid>
         </Grid>
 
-        <Grid container>
+        <Grid container spacing={2}>
           {items.map((item, i) => (
             <Grid item xs={3} key={i}>
               <Card
@@ -29,7 +31,6 @@ export default function ProfileCollection({ user, filters, items = [] }) {
                   verified: user.verified,
                   avatarUrl: user.avatar,
                 }}
-                timeLeft={3000}
               />
             </Grid>
           ))}

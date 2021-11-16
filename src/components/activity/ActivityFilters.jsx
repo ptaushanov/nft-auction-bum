@@ -1,4 +1,4 @@
-import styles from "./ProfileCollectionFilters.module.scss";
+import styles from "./ActivityFilters.module.scss";
 import {
   FormControl,
   Select,
@@ -12,13 +12,13 @@ import { Search } from "@mui/icons-material";
 
 import { useState } from "react";
 
-export default function ProfileCollectionFilters({ filters }) {
+export default function ActivityFilters({ filters }) {
   const [filterValue, setFilterValue] = useState("");
-  const [priceRangeValue, setPriceRangeValue] = useState("");
+  const [typeValue, setTypeValue] = useState("");
 
   return (
-    <div className={styles["profile-collection-filters"]}>
-      <Stack direction={"row"} spacing={2} justifyContent={"flex-end"}>
+    <div className={styles["activity-filters"]}>
+      <Stack direction={"row"} spacing={2} justifyContent={"center"}>
         <FormControl>
           <InputLabel id="sort-select-label">Sort by</InputLabel>
           <Select
@@ -26,6 +26,7 @@ export default function ProfileCollectionFilters({ filters }) {
             label="Sort by"
             value={filterValue}
             sx={{ width: "13.75rem" }}
+            color={"primary"}
             onChange={(e) => setFilterValue(e.target.value)}
           >
             {filters.sort.map((filter, i) => (
@@ -36,17 +37,18 @@ export default function ProfileCollectionFilters({ filters }) {
           </Select>
         </FormControl>
         <FormControl>
-          <InputLabel id="range-select-label">Price range</InputLabel>
+          <InputLabel id="type-label">Type</InputLabel>
           <Select
-            labelId="range-select-label"
-            label="Price range"
-            value={priceRangeValue}
+            labelId="type-label"
+            label="Type"
+            value={typeValue}
             sx={{ minWidth: "13.75rem" }}
-            onChange={(e) => setPriceRangeValue(e.target.value)}
+            color={"primary"}
+            onChange={(e) => setTypeValue(e.target.value)}
           >
-            {filters.price.map((price, i) => (
-              <MenuItem value={price.value} key={i}>
-                {price.label}
+            {filters.type.map((type, i) => (
+              <MenuItem value={type.value} key={i}>
+                {type.label}
               </MenuItem>
             ))}
           </Select>
