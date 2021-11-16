@@ -1,0 +1,16 @@
+@use "../../styles/colors.scss";
+
+.activity-filters {
+    margin-bottom: 2.375rem;
+
+    .search-icon {
+        color: colors.$text_primary !important;
+        margin-left: 0.5rem !important;
+        padding: 2px !important;
+    }
+    .search {
+        background-color: colors.$background_paper !important;
+        padding: 0.625rem !important;
+        border-radius: 30px;
+    }
+}
