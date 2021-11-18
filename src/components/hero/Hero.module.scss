@@ -2,13 +2,13 @@
 
 .hero {
     padding-top: 5.5rem;
-    height: 20rem;
+    height: 23rem;
     background-color: colors.$primary_main;
 
     .text {
         text-align: center;
-        text-transform: uppercase !important;
         font-weight: 900 !important;
+        font-size: 3.75rem !important;
         line-height: 4.571rem !important;
     }
 }

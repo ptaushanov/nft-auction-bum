@@ -7,7 +7,7 @@ export default function How() {
   return (
     <div>
       <Header />
-      <Hero text={"How it works"} />
+      <Hero text={"How it works".toUpperCase()} />
       <Description
         text={`Ullamco deserunt consequat adipisicing ipsum qui ea amet et aliqua anim deserunt. Quis tempor minim ea tempor cillum. Proident magna voluptate ad officia cillum. Sint qui laboris quis ea ullamco exercitation tempor.
 Exercitation qui sit veniam irure laborum ipsum duis ut do exercitation eiusmod. Fugiat commodo consequat pariatur dolor quis excepteur. Eu amet laborum commodo eiusmod aliqua ullamco. Nulla laboris nostrud mollit eiusmod sit irure do nulla ut qui culpa occaecat dolore ipsum.
