@@ -1,63 +1,65 @@
 import styles from "./ActivityFilters.module.scss";
 import {
   FormControl,
-  Select,
+  InputAdornment,
   InputLabel,
   MenuItem,
+  Select,
   Stack,
   TextField,
-  InputAdornment,
 } from "@mui/material";
-import { Search } from "@mui/icons-material";
 
+import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
 
 export default function ActivityFilters({ filters }) {
-  const [filterValue, setFilterValue] = useState("");
-  const [typeValue, setTypeValue] = useState("");
+  const [sortBy, setSortBy] = useState("");
+  const [type, setType] = useState("");
 
   return (
     <div className={styles["activity-filters"]}>
       <Stack direction={"row"} spacing={2} justifyContent={"center"}>
         <FormControl>
-          <InputLabel id="sort-select-label">Sort by</InputLabel>
+          <InputLabel id="sort-by-label">Sort by</InputLabel>
           <Select
-            labelId="sort-select-label"
-            label="Sort by"
-            value={filterValue}
+            labelId="sort-by-label"
+            value={sortBy}
             sx={{ width: "13.75rem" }}
             color={"primary"}
-            onChange={(e) => setFilterValue(e.target.value)}
+            onChange={(e) => setSortBy(e.target.value)}
           >
-            {filters.sort.map((filter, i) => (
-              <MenuItem value={filter.value} key={i}>
-                {filter.label}
-              </MenuItem>
-            ))}
+            {filters.sort.map((filter) => {
+              return (
+                <MenuItem key={filter.label} value={filter.value}>
+                  {filter.label}
+                </MenuItem>
+              );
+            })}
           </Select>
         </FormControl>
         <FormControl>
           <InputLabel id="type-label">Type</InputLabel>
           <Select
             labelId="type-label"
-            label="Type"
-            value={typeValue}
+            value={type}
             sx={{ minWidth: "13.75rem" }}
             color={"primary"}
-            onChange={(e) => setTypeValue(e.target.value)}
+            onChange={(e) => setType(e.target.value)}
           >
-            {filters.type.map((type, i) => (
-              <MenuItem value={type.value} key={i}>
-                {type.label}
-              </MenuItem>
-            ))}
+            {filters.type.map((filter) => {
+              return (
+                <MenuItem key={filter.label} value={filter.value}>
+                  {filter.label}
+                </MenuItem>
+              );
+            })}
           </Select>
         </FormControl>
         <TextField
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
-                <Search className={styles["search-icon"]} />
+                <SearchIcon className={styles["search-icon"]} />
               </InputAdornment>
             ),
             className: styles.search,
