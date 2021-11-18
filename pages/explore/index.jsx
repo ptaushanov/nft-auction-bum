@@ -35,7 +35,14 @@ export default function Explore() {
     <div>
       <Header />
       <Container>
-        <Grid container>
+        <Grid
+          container
+          sx={{
+            marginTop: "5rem",
+            alignItems: "flex-end",
+            marginBottom: "4rem",
+          }}
+        >
           <Grid item xs={3}>
             <ExploreTitle text={"Explore"} />
           </Grid>
