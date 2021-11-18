@@ -3,13 +3,14 @@
 .description {
     .container {
         background-color: colors.$background_paper !important;
-        max-width: 60% !important;
-        margin-top: -7rem !important;
+        max-width: 63.2% !important;
+        margin-top: -9.9rem !important;
         margin-bottom: 6rem !important;
         padding: 4rem !important;
 
         .text {
             color: colors.$text_secondary;
+            line-height: 1.625rem;
         }
 
         .image {
