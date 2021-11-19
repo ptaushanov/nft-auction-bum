@@ -5,8 +5,6 @@ import TopCollectors from "../src/components/collectors/TopCollectors";
 import How from "../src/components/how/How";
 import Auctions from "../src/components/auctions/Auctions";
 import Footer from "../src/components/footer/Footer";
-
-import dataFeatured from "../data/featured.json";
 import dataUsers from "../data/users.json";
 import dataNfts from "../data/nfts.json";
 
@@ -20,17 +18,22 @@ export default function Index() {
   const [nfts, setNfts] = useState([]);
 
   useEffect(async () => {
-    // Featred
-    const processedFeatured = dataFeatured.map(card => {
-      return { image: card.source.url };
-    });
-    processedFeatured[0] = { ...processedFeatured[0], cols: 3, rows: 2 };
-    setFeaturedCards(processedFeatured);
-
-    // Trending
+    const apiUrl = process.env.apiUrl;
     try {
-      const dataTrending = await fetch(process.env.apiUrl + "/trending").then(
-        res => res.json()
+      // Featred
+      const dataFeatured = await fetch(apiUrl + "/featured").then(res =>
+        res.json()
+      );
+
+      const processedFeatured = dataFeatured.nfts.map(card => {
+        return { image: card.source.url };
+      });
+      processedFeatured[0] = { ...processedFeatured[0], cols: 3, rows: 2 };
+      setFeaturedCards(processedFeatured);
+
+      //  Trending
+      const dataTrending = await fetch(apiUrl + "/trending").then(res =>
+        res.json()
       );
 
       // Trending Nfts
