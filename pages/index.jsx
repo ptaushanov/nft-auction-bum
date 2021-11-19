@@ -5,7 +5,6 @@ import TopCollectors from "../src/components/collectors/TopCollectors";
 import How from "../src/components/how/How";
 import Auctions from "../src/components/auctions/Auctions";
 import Footer from "../src/components/footer/Footer";
-import dataUsers from "../data/users.json";
 import dataNfts from "../data/nfts.json";
 
 import { useState, useEffect } from "react";
@@ -55,6 +54,25 @@ export default function Index() {
 
       // Trending Filters
       setTrendingFilters(dataTrending.filters);
+
+      // Top Collectors
+      const dataUsers = await fetch(apiUrl + "/top-collectors").then(res =>
+        res.json()
+      );
+
+      setTopCollectors(
+        dataUsers.users
+          .map(user => {
+            return {
+              name: user.username,
+              nftsCount: user.nfts.length,
+              avatar: user.avatar.url,
+              verified: user.verified,
+            };
+          })
+          .sort((f, s) => f.nftsCount < s.nftsCount)
+          .slice(0, 12)
+      );
     } catch (error) {
       // Fetch error or TypeError
       console.error(error.message);
@@ -75,20 +93,6 @@ export default function Index() {
           timeLeft: Math.abs(Date.parse(nft.auction_end) - Date.now()),
         };
       })
-    );
-
-    setTopCollectors(
-      dataUsers
-        .map(user => {
-          return {
-            name: user.username,
-            nftsCount: user.nfts.length,
-            avatar: user.avatar.url,
-            verified: user.verified,
-          };
-        })
-        .sort((f, s) => f.nftsCount < s.nftsCount)
-        .slice(0, 12)
     );
   }, []);
 
