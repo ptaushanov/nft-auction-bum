@@ -5,7 +5,6 @@ import TopCollectors from "../src/components/collectors/TopCollectors";
 import How from "../src/components/how/How";
 import Auctions from "../src/components/auctions/Auctions";
 import Footer from "../src/components/footer/Footer";
-import dataNfts from "../data/nfts.json";
 
 import { useState, useEffect } from "react";
 
@@ -14,7 +13,9 @@ export default function Index() {
   const [trendingItems, setTrendingItems] = useState([]);
   const [trendingFilters, setTrendingFilters] = useState(null);
   const [topCollectors, setTopCollectors] = useState([]);
-  const [nfts, setNfts] = useState([]);
+  const [collectorFilters, setCollectorFilters] = useState(null);
+  const [auctions, setAuctions] = useState([]);
+  const [auctionFilters, setAuctionFilters] = useState(null);
 
   useEffect(async () => {
     const apiUrl = process.env.apiUrl;
@@ -60,6 +61,7 @@ export default function Index() {
         res.json()
       );
 
+      // Top Collectors Users
       setTopCollectors(
         dataUsers.users
           .map(user => {
@@ -73,27 +75,38 @@ export default function Index() {
           .sort((f, s) => f.nftsCount < s.nftsCount)
           .slice(0, 12)
       );
+
+      // Top Collectors Filters
+      setCollectorFilters(dataUsers.filters);
+
+      // Live Auction
+      const dataAuctions = await fetch(apiUrl + "/live-auctions").then(res =>
+        res.json()
+      );
+
+      // Live Auction Nfts
+      setAuctions(
+        dataAuctions.nfts.map(nft => {
+          return {
+            name: nft.name,
+            likes: nft.likes,
+            mediaUrl: nft.source.url,
+            user: {
+              avatarUrl: nft.owner.avatar.url,
+            },
+            price: nft.price,
+            currency: nft.currency,
+            timeLeft: Math.abs(Date.parse(nft.auction_end) - Date.now()),
+          };
+        })
+      );
+
+      // Live Auction Filters
+      setAuctionFilters(dataAuctions.filters);
     } catch (error) {
       // Fetch error or TypeError
       console.error(error.message);
     }
-
-    // Nfts for Live Auction
-    setNfts(
-      dataNfts.map(nft => {
-        return {
-          name: nft.name,
-          likes: nft.likes,
-          mediaUrl: nft.source.url,
-          user: {
-            avatarUrl: nft.owner.avatar.url,
-          },
-          price: nft.price,
-          currency: nft.currency,
-          timeLeft: Math.abs(Date.parse(nft.auction_end) - Date.now()),
-        };
-      })
-    );
   }, []);
 
   return (
@@ -101,7 +114,7 @@ export default function Index() {
       <Header />
       <Featured items={featuredCards} />
       <Trending cards={trendingItems} filters={trendingFilters} />
-      <TopCollectors collectors={topCollectors} />
+      <TopCollectors collectors={topCollectors} filters={collectorFilters} />
       <How
         title="How it works"
         description="Discover, collect, and sell extraordinary NFTs on the world's first and largest NFT marketplace. There are  three things you'll need in place to open your account and start buying or selling NFTs on BUM."
@@ -124,7 +137,7 @@ export default function Index() {
         ]}
         link="https://app.boom.dev"
       />
-      <Auctions cards={nfts} />
+      <Auctions cards={auctions} filters={auctionFilters} />
       <Footer />
     </div>
   );
