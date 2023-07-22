@@ -2,6 +2,7 @@
   "name": "nextjs",
   "version": "5.0.0",
   "private": true,
+  "homepage": "https://ptaushanov.github.io/nft-auction-bum/",
   "dependencies": {
     "@emotion/cache": "11.4.0",
     "@emotion/react": "11.4.1",
@@ -27,6 +28,11 @@
     "build": "next build",
     "start-server": "next start",
     "start": "next -p 8080",
-    "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
+    "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }

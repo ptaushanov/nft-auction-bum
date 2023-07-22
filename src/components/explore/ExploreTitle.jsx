@@ -4,7 +4,9 @@ import { Typography } from "@mui/material";
 export default function ExploreTitle({ text }) {
   return (
     <div className={styles["explore-title"]}>
-      <Typography variant={"h1"}>{text}</Typography>
+      <Typography variant={"h1"} className={styles.title}>
+        {text}
+      </Typography>
     </div>
   );
 }

@@ -1,74 +1,52 @@
 import Header from "../../../src/components/header/Header";
 import ProductContainer from "../../../src/components/product/ProductContainer";
 import Footer from "../../../src/components/footer/Footer";
-import dataNfts from "../../../data/nfts.json";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 
 export default function Product() {
   const router = useRouter();
-  const id = router.query.id;
-  const [dataNft, setDataNft] = useState(null);
+  const [product, setProduct] = useState(null);
 
-  useEffect(() => {
+  useEffect(async () => {
     if (router.isReady) {
-      setDataNft(dataNfts.find((nft) => nft.id == id));
+      const id = router.query.id;
+      try {
+        const responce = await fetch(`${process.env.apiUrl}/nfts/${id}`);
+        const dataNft = await responce.json();
+        setProduct(dataNft);
+      } catch (error) {
+        console.error(error.message);
+      }
     }
   }, [router]);
 
   return (
     <div>
       <Header />
-      {dataNft && (
+      {product && (
         <ProductContainer
-          name={dataNft.name}
-          owner={dataNft.owner}
-          price={dataNft.price}
-          currency={dataNft.currency}
-          likes={dataNft.likes}
-          auction_end={dataNft.auction_end}
+          name={product.name}
+          owner={product.owner}
+          price={product.price}
+          currency={product.currency}
+          likes={product.likes}
+          auction_end={product.auction_end}
           details={
             "Fugiat magna ipsum exercitation consequat pariatur ullamco consequat minim. Sunt velit do pariatur qui ad cillum dolor aute tempor minim et. Occaecat amet cupidatat officia non laboris enim adipisicing ut aliquip duis amet incididunt dolor. Aute magna enim et dolore dolor."
           }
-          bids={[
-            {
+          bids={product.bids.map(bid => {
+            return {
               user: {
-                avatar: "/images/avatar.png",
-                name: "hrisi",
-                verified: true,
+                name: bid.user.username,
+                avatar: bid.user.avatar,
+                verified: bid.user.verified,
               },
-              amount: 30,
-              date: "2021-10-22T08:29:23.382Z",
-            },
-            {
-              user: {
-                avatar: "/images/avatar.png",
-                name: "maxi",
-                verified: true,
-              },
-              amount: 1000,
-              date: "2021-10-22T08:29:23.382Z",
-            },
-            {
-              user: {
-                avatar: "/images/avatar.png",
-                name: "hrisi",
-                verified: true,
-              },
-              amount: 30,
-              date: "2021-10-22T08:29:23.382Z",
-            },
-            {
-              user: {
-                avatar: "/images/avatar.png",
-                name: "maxi",
-                verified: true,
-              },
-              amount: 1000,
-              date: "2021-10-22T08:29:23.382Z",
-            },
-          ]}
-          source={dataNft.source}
+              amount: bid.amount,
+              date: bid.date,
+            };
+          })}
+          source={product.source}
           isLive={true}
           buyAmount={3}
           bidAmount={1}
