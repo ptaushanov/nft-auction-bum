@@ -24,7 +24,7 @@
     "sass": "^1.42.1"
   },
   "engines": {
-    "node": "14.x"
+    "node": "16.x"
   },
 
   "scripts": {
